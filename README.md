@@ -44,7 +44,7 @@ Using
 --------------
 
 ### Widgets
-* NavLTE
+* NavLTE (menu adminLTE like for sidebar)
 
 ```php
 use hscstudio\heart\widgets\NavLTE;
