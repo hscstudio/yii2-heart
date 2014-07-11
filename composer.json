@@ -1,0 +1,18 @@
+{
+	"name": "hsctudio/yii2-heart",
+	"description": "Set of Yii2 extension",
+	"type": "yii2-extension",
+	"keywords": "["yii2","extension","heart"]",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Hafid Mukhlasin",
+			"email": "hafidmukhlasin@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"hscstudio\\heart\\": ""
+		}
+	}
+}
