@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace hscstudio\heart\widgets;;
+namespace hscstudio\heart\widgets;
 
 use Yii;
 use yii\base\Widget;
