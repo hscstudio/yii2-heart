@@ -28,6 +28,7 @@ Dillinger uses a number of open source projects to work properly:
 
 Installation
 --------------
+Before You use this extension, You should know how to integrate Yii2 and AdmiLTE. You can read http://www.yiiframework.com/wiki/729/tutorial-about-how-to-integrate-yii2-with-fantastic-theme-adminlte/ 
 Prefered way install with composer, add this setting to Your composer.json
 
 ```php
