@@ -14,6 +14,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Widget;
 use yii\bootstrap\BootstrapAsset;
 
+use hscstudio\heart\HeartBootstrap;
 use hscstudio\heart\widgets\DropdownLTE;
 
 /**

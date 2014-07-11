@@ -5,13 +5,13 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace hscstudio\heart\widgets;
+namespace hscstudio\heart\widgets;;
 
 use Yii;
 use yii\base\Widget;
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
-
+use hscstudio\heart\HeartBootstrap;
 /**
  * Breadcrumbs displays a list of links indicating the position of the current page in the whole site hierarchy.
  *

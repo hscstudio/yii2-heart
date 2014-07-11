@@ -10,7 +10,7 @@ namespace hscstudio\heart\widgets;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-
+use hscstudio\heart\HeartBootstrap;
 use yii\bootstrap\Widget;
 
 /**
