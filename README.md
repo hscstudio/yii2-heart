@@ -40,7 +40,7 @@ Then update your project, for example via command prompt windows
 c:\xampp\php\php.exe c:\xampp\php\composer.phar update --prefer-dist
 ```
 
-Installation
+Using
 --------------
 
 ### Widgets
