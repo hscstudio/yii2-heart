@@ -1,21 +1,14 @@
-Assigment
+Index
 ---------
-Assigment menu used for grant or revoke role to/from user.
+- Configuration
+[Layout](layout.md)
 
-Role
-----
-Role menu used for manage role. You can create, delete or update role from this menu.
-Adding and remove child of role can be doing there.
+- Layout
+[Layout](layout.md)
 
-Permision
----------
+- Widget
+[Widget](widget.md)
 
+- Module
+[privilege](privilege.md)
 
-Route
------
-Route is list of avaliable route of your application. It is automatic read application structure.
-Click button '>>' to save it and button '<<' to delete.
-
-Rule
-----
-see [Rules](http://www.yiiframework.com/doc-2.0/guide-authorization.html#using-rules).
