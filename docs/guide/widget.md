@@ -2,11 +2,6 @@ Widget
 ---------
 Usage widget in view
 
-Before You use widget, You should use Init
-```php
-use hscstudio\heart\Init;
-```
-
 Navbar & Nav
 ----
 ```php

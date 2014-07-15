@@ -1,12 +1,7 @@
 Layout
 ---------
 in @app\views\layouts\main.php
-```php
-use hscstudio\heart\Init;
-
-```
-
-Then please use container-fluid not container
+please use class css container-fluid not container
 
 for make 2 column layouts, You should create a file column2.php, this use adminLTE style.
 ```php
