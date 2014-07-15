@@ -21,7 +21,7 @@ Waiting
 - Wrap TinyButStrong
 - Create Widget Export Excel, Word, Pdf
 - Create Widget Import Excel
-
+- Create Gii Improved base on this extension
 
 Installation
 ------------
