@@ -18,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require mdmsoft/yii2-admin "*"
+php composer.phar require mdmsoft/yii2-heart "*"
 ```
 
 or add
 
 ```
-"mdmsoft/yii2-admin": "*"
+"mdmsoft/yii2-heart": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -38,13 +38,16 @@ Once the extension is installed, simply modify your application configuration as
 ```php
 return [
 	'bootstrap' => [
-		'admin',
+		'privilege',
+		'hscstudio\heart\Init'
 		...
 	],
 	'modules' => [
-		'admin' => [
-			'class' => 'mdm\admin\Module',
+		'privilege' => [
+			'class' => 'hscstudio\heart\modules\admin\Module',
 			'allowActions' => [
+				'debug/*',
+                		'privilege/*'
 				'admin/*', // add or remove allowed actions to this list
 			]
 		]
@@ -54,7 +57,7 @@ return [
 	'components' => [
 		....
 		'authManager' => [
-			'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
+			'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
 		]
 	],
 ];
@@ -64,12 +67,12 @@ See [Yii RBAC](http://www.yiiframework.com/doc-2.0/guide-authorization.html#role
 You can then access Auth manager through the following URL:
 
 ```
-http://localhost/path/to/index.php?r=admin
+http://localhost/path/to/index.php?r=privilege
 ```
 
 To use menu manager (optional). Execute yii migration
 ```
-yii migrate --migrationPath=@mdm/admin/migration
+yii migrate --migrationPath=@hscstudio/heart/modules/admin/migration
 ```
 
-[screenshots](https://picasaweb.google.com/105012704576561549351/Yii2Admin?authuser=0&feat=directlink)
+[screenshots]
