@@ -18,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require mdmsoft/yii2-heart "*"
+php composer.phar require hscstudio/yii2-heart "*"
 ```
 
 or add
 
 ```
-"mdmsoft/yii2-heart": "*"
+"hscstudio/yii2-heart": "*"
 ```
 
 to the require section of your `composer.json` file.
