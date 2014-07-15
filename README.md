@@ -4,11 +4,6 @@ Yii2-heart
 Yii2-heart is extension for Yii Framework version 2.0. It is set of extension (widget, modules, wrapper, etc) to easiest developer in application development.
 
 Warning : This extension under development 
-Dosc:
------
-- [change log](CHANGELOG.md).
-- [Basic Usage](docs/guide/basic-usage.md).
-- [Using Menu](docs/guide/using-menu.md).
 
 Installation
 ------------
@@ -63,16 +58,5 @@ return [
 ];
 ```
 
-See [Yii RBAC](http://www.yiiframework.com/doc-2.0/guide-authorization.html#role-based-access-control-rbac) for more detail.
-You can then access Auth manager through the following URL:
-
-```
-http://localhost/path/to/index.php?r=privilege
-```
-
-To use menu manager (optional). Execute yii migration
-```
-yii migrate --migrationPath=@hscstudio/heart/modules/admin/migration
-```
-
-[screenshots]
+And then please read  Guide 
+- [Index Guide](docs/guide/index.md)

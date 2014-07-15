@@ -9,6 +9,6 @@ Index
 - Widget
 [Widget](widget.md)
 
-- Module
+- Modules
 [privilege](privilege.md)
 
