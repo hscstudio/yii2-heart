@@ -42,7 +42,7 @@ return [
 			'class' => 'hscstudio\heart\modules\admin\Module',
 			'allowActions' => [
 				'debug/*',
-                		'privilege/*'
+                'privilege/*'
 				'admin/*', // add or remove allowed actions to this list
 			]
 		]
