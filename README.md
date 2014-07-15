@@ -3,7 +3,25 @@ Yii2-heart
 
 Yii2-heart is extension for Yii Framework version 2.0. It is set of extension (widget, modules, wrapper, etc) to easiest developer in application development.
 
-Warning : This extension under development 
+Warning : This extension under development or PUBLIC PREVIEW :)
+
+
+Roadmap
+------------
+Done
+- Integrate Yii2-admin
+
+Progress..
+- Wrap adminLTE -> create widget
+
+Waiting
+- Wrap PHPExcel
+- Wrap Arshaw Calendar
+- Wrap TCPDF or FPDF
+- Wrap TinyButStrong
+- Create Widget Export Excel, Word, Pdf
+- Create Widget Import Excel
+
 
 Installation
 ------------
