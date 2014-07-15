@@ -7,7 +7,8 @@ Before You use widget, You should use Init
 use hscstudio\heart\Init;
 ```
 
-- Navbar & Nav
+Navbar & Nav
+----
 ```php
 use hscstudio\heart\widgets\Nav;
 use hscstudio\heart\widgets\NavBar;
@@ -30,4 +31,44 @@ echo Nav::widget([
 ]);
 
 NavBar::end();
+```
+
+NavSide
+----
+
+Sidebar menu adminLTE like.. :)
+```php
+<?php
+use hscstudio\heart\widgets\NavSide;
+echo NavSide::widget([
+	 'items' => [
+		 [
+			'icon'=>'fa fa-dashboard fa-fw',
+			'label' => 'Dashboard',
+			'url' => ['default/index'],
+			'badge'=>'New',
+			'badgeClass'=>'pull-right bg-green',
+		 ],
+		 [
+			'icon'=>'fa fa fa-cogs fa-fw',
+			'label' => 'Generator',
+			'url' => ['/gii'],
+		 ],
+		 [
+			'icon'=>'fa fa fa-warning fa-fw',
+			'label' => 'Privileges',
+			'url' => ['/privilege/assigment'],
+		 ],
+	 ],
+ ]);
+?>
+```
+
+Breadcrumbs
+----
+```php
+use hscstudio\heart\widgets\Breadcrumbs;
+<?= Breadcrumbs::widget([
+	'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+]) ?>
 ```
