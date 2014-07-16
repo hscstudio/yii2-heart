@@ -10,13 +10,14 @@ Roadmap
 ------------
 Done
 - Integrate Yii2-admin
+- Wrap Arshaw Calendar
 
 Progress..
-- Wrap adminLTE -> create widget
+- Wrap adminLTE -> create widget content
+  (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs)
 
 Waiting
 - Wrap PHPExcel
-- Wrap Arshaw Calendar
 - Wrap TCPDF or FPDF
 - Wrap TinyButStrong
 - Create Widget Export Excel, Word, Pdf
@@ -50,12 +51,15 @@ Once the extension is installed, simply modify your application configuration as
 
 ```php
 return [
-	'bootstrap' => [
+	'bootstrap' => [		
+		'heart',
 		'privilege',
-		'hscstudio\heart\Init'
 		...
 	],
 	'modules' => [
+		'heart' => [
+			'class' => 'hscstudio\heart\Module',
+		],
 		'privilege' => [
 			'class' => 'hscstudio\heart\modules\admin\Module',
 			'allowActions' => [

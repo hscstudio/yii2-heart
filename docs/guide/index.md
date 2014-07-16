@@ -1,8 +1,5 @@
 Index
 ---------
-- Configuration
-[Layout](layout.md)
-
 - Layout
 [Layout](layout.md)
 
