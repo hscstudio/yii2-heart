@@ -12,7 +12,7 @@
 	],
 	"require": {
 		"phpoffice/phpexcel": "dev-master",
-		"phpoffice/phpword": "dev-master",
+		"phpoffice/phpword": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
