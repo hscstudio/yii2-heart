@@ -21,6 +21,7 @@ $route = $controller->route;
 			$label = Html::tag('i', '', ['class' => 'glyphicon glyphicon-chevron-right pull-right']) .
 				Html::tag('span', Html::encode($menu['label']), []);
 			$active = strpos($route, trim($menu['url'][0], '/')) === 0 ? ' active' : '';
+			if (strpos($route, trim($menu['url'][0], '/')) === 0) $this->title=$menu['label'];
 			/*
 			echo Html::a($label, $menu['url'], [
 				'class' => 'list-group-item' . $active,
