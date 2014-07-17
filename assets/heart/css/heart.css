@@ -2100,7 +2100,7 @@ aside.right-side ul.breadcrumb {
 }
 
 .right-side > .content {
-	padding: 0 15px;
+	padding: 15px;
 }
 
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
