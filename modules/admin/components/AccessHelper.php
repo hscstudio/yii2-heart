@@ -4,7 +4,7 @@ namespace hscstudio\heart\modules\admin\components;
 
 use Yii;
 use yii\helpers\Inflector;
-use yii\caching\GroupDependency;
+use yii\caching\TagDependency;
 use ReflectionClass;
 use hscstudio\heart\modules\admin\models\Menu;
 
@@ -40,8 +40,8 @@ class AccessHelper
             $result = [];
             self::getRouteRecrusive(Yii::$app, $result);
             if ($cache !== null) {
-                $cache->set($key, $result, 0, new GroupDependency([
-                    'group' => static::getGroup(self::FILE_GROUP)
+                $cache->set($key, $result, 0, new TagDependency([
+                    'tags' => static::getGroup(self::FILE_GROUP)
                 ]));
             }
         }
@@ -187,8 +187,8 @@ class AccessHelper
             $assigned = static::requiredParent($assigned, $menus);
             $result = static::normalizeMenu($assigned, $menus, $callback, $root);
             if (isset($cache)) {
-                $cache->set($key, $result, 0, new GroupDependency([
-                    'group' => static::getGroup(self::AUTH_GROUP)
+                $cache->set($key, $result, 0, new TagDependency([
+                    'tags' => static::getGroup(self::AUTH_GROUP)
                 ]));
             }
         }
@@ -265,14 +265,14 @@ class AccessHelper
     public static function refeshFileCache()
     {
         if (($cache = Yii::$app->getCache()) !== null) {
-            GroupDependency::invalidate($cache, static::getGroup(self::FILE_GROUP));
+            TagDependency::invalidate($cache, static::getGroup(self::FILE_GROUP));
         }
     }
 
     public static function refeshAuthCache()
     {
         if (($cache = Yii::$app->getCache()) !== null) {
-            GroupDependency::invalidate($cache, static::getGroup(self::AUTH_GROUP));
+            TagDependency::invalidate($cache, static::getGroup(self::AUTH_GROUP));
         }
     }
 }
