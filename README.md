@@ -11,15 +11,19 @@ Roadmap
 Done
 - Integrate Yii2-admin
 - Wrap Arshaw Calendar
+- Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
+```
+$objPHPExcel = new \PHPExcel();
+```
 
 Progress..
 - Wrap adminLTE -> create widget content
   (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs)
 
 Waiting
-- Wrap PHPExcel
 - Wrap TCPDF or FPDF
 - Wrap TinyButStrong
+- Wrap Highchart
 - Create Widget Export Excel, Word, Pdf
 - Create Widget Import Excel
 - Create Gii Improved base on this extension
@@ -32,13 +36,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require hscstudio/yii2-heart "dev-master"
+php composer.phar require hscstudio/yii2-heart "*"
 ```
 
 or add
 
 ```
-"hscstudio/yii2-heart": "dev-master"
+"hscstudio/yii2-heart": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -53,29 +57,15 @@ Once the extension is installed, simply modify your application configuration as
 return [
 	'bootstrap' => [		
 		'heart',
-		'privilege',
 		...
 	],
 	'modules' => [
 		'heart' => [
 			'class' => 'hscstudio\heart\Module',
 		],
-		'privilege' => [
-			'class' => 'hscstudio\heart\modules\admin\Module',
-			'allowActions' => [
-				'debug/*',
-                'privilege/*', // add or remove allowed actions to this list
-			]
-		]
 		...
 	],
 	...
-	'components' => [
-		....
-		'authManager' => [
-			'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
-		]
-	],
 ];
 ```
 

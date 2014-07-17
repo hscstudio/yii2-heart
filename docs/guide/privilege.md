@@ -1,6 +1,50 @@
 Privilege
 ---------
 
+Configuration
+---------
+In common config  /common/config/main.php
+```php
+return [
+  ...
+  'components' => [
+    ....
+    'authManager' => [
+      'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+    ]
+  ],
+];
+```
+
+In app config  @app\config\main.php
+```php
+return [
+  'bootstrap' => [    
+    ...
+    'privilege',
+    ...
+  ],
+  'modules' => [
+    ...
+    'privilege' => [
+      'class' => 'hscstudio\heart\modules\admin\Module',
+      'allowActions' => [
+        'debug/*',
+        'site/*',
+        'gii/*',
+        'privilege/*', // add or remove allowed actions to this list
+      ]
+    ]
+    ...
+  ],
+  ...
+];
+```
+Please migrate if You use DBManager
+```
+yii migrate --migrationPath=@yii/rbac/migrations/
+```
+
 Assigment
 ---------
 Assigment menu used for grant or revoke role to/from user.
