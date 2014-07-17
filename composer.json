@@ -11,6 +11,7 @@
 		}
 	],
 	"require": {
+		"yiisoft/yii2-jui": "*",
 		"phpoffice/phpexcel": "dev-master",
 		"phpoffice/phpword": "dev-master"
 	},
