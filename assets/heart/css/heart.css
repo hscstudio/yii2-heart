@@ -2099,9 +2099,7 @@ aside.right-side ul.breadcrumb {
     height: 45px;
 }
 
-.right-side > .content {
-	padding: 15px;
-}
+
 
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
 	margin: 0px;
