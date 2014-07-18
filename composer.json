@@ -12,6 +12,8 @@
 	],
 	"require": {
 		"yiisoft/yii2-jui": "*",
+		"dektrium/yii2-user": "*",
+		"mdmsoft/yii2-admin": "*",
 		"phpoffice/phpexcel": "dev-master",
 		"phpoffice/phpword": "dev-master"
 	},
