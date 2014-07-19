@@ -18,6 +18,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 	
 	public $features=[
 		'fontawesome'=>true,
+		'gii'=>[],
 		'privilege'=>[],
 		'user'=>[]	
 	];
@@ -45,6 +46,23 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		
 		$view = $app->getView();
 		$pathMap=[];
+		
+		if(isset($this->features['gii'])){		
+			$app->setModules([
+				'gii' => [
+					'class' => 'yii\gii\Module',
+					'allowedIPs' => ['127.0.0.1', '::1', '192.168.0.*', '192.168.178.20'],  
+					'generators' => [
+						'crud' => [
+							'class' => 'hscstudio\heart\modules\gii\crud\Generator',
+							'templates' => [
+								'my' => '@hscstudio/heart/modules/gii/crud/default',
+							]
+						]
+					],
+				]
+			]);
+		}
 		
 		if(isset($this->features['user'])){		
 			$app->setModules([
