@@ -14,6 +14,7 @@ use yii\web\JsExpression;
 $this->title = 'Assigments';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="assigment-index">
     <h1>User: <?= $model->{$usernameField} ?></h1>
 
@@ -49,3 +50,4 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 $this->render('_script',['id'=>$model->{$idField}]);
+$this->endContent();

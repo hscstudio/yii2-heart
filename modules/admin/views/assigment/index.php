@@ -13,6 +13,7 @@ use yii\widgets\Pjax;
 $this->title = 'Assigments';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="assigment-index">
 
 
@@ -37,5 +38,5 @@ $this->params['breadcrumbs'][] = $this->title;
 	]);
     Pjax::end();
 	?>
-
 </div>
+<?php $this->endContent();

@@ -12,8 +12,10 @@ use yii\widgets\Pjax;
 $this->title = 'Permission';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="role-index">
 
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Create Permission', ['create'], ['class' => 'btn btn-success']) ?>
@@ -37,3 +39,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
 
 </div>
+<?php $this->endContent();

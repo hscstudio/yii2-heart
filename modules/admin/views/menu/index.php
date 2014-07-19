@@ -12,6 +12,7 @@ use yii\widgets\Pjax;
 $this->title = 'Menus';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="menu-index">
 
     <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
@@ -44,3 +45,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
 
 </div>
+<?php $this->endContent();
