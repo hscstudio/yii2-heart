@@ -13,7 +13,7 @@ $this->title = 'Create Route';
 $this->params['breadcrumbs'][] = ['label' => 'Routes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1>Create Route</h1>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 
 <div class="create">
 
@@ -27,3 +27,4 @@ $this->params['breadcrumbs'][] = $this->title;
 	<?php ActiveForm::end(); ?>
 
 </div><!-- create -->
+<?php $this->endContent();

@@ -15,8 +15,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="role-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
         <?= Html::a('Create Role', ['create'], ['class' => 'btn btn-success']) ?>
     </p>

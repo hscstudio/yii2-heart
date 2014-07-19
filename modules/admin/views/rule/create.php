@@ -11,12 +11,11 @@ $this->title = 'Create Rule';
 $this->params['breadcrumbs'][] = ['label' => 'Rules', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="auth-item-create">
-
-	<h1><?= Html::encode($this->title) ?></h1>
-
 	<?php echo $this->render('_form', [
 		'model' => $model,
 	]); ?>
 
 </div>
+<?php $this->endContent();

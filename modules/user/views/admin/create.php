@@ -21,7 +21,7 @@ $this->title = Yii::t('user', 'Create a user account');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/layouts/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
 <div class="panel panel-default">
     <div class="panel-heading">
         <?= Html::encode($this->title) ?>

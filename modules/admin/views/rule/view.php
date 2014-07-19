@@ -11,10 +11,8 @@ $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Roles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 <div class="auth-item-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->name], ['class' => 'btn btn-primary']) ?>
         <?php
@@ -36,4 +34,4 @@ $this->params['breadcrumbs'][] = $this->title;
     ]);
     ?>
 </div>
-
+<?php $this->endContent();

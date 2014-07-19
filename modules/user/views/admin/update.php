@@ -22,7 +22,7 @@ $this->title = Yii::t('user', 'Update user account');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/layouts/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
 <h1><i class="glyphicon glyphicon-user"></i> <?= Html::encode($model->username) ?>
     <?php if (!$model->getIsConfirmed()): ?>
         <?= Html::a(Yii::t('user', 'Confirm'), ['confirm', 'id' => $model->id], ['class' => 'btn btn-success btn-xs', 'data-method' => 'post']) ?>

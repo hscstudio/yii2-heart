@@ -8,7 +8,8 @@ use yii\helpers\Html;
 $this->title = 'Routes';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1>Routes</h1>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
+
 <p>
     <?= Html::a('Create route', ['create'], ['class' => 'btn btn-success']) ?>
 </p>
@@ -49,3 +50,4 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 $this->render('_script');
+$this->endContent();

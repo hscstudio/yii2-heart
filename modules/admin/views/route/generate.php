@@ -12,7 +12,7 @@ $this->title = 'Generate Routes';
 $this->params['breadcrumbs'][] = ['label' => 'Routes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1>Generate Routes</h1>
+<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
 
 <?php
 echo Html::beginForm();
@@ -39,3 +39,4 @@ echo GridView::widget([
 echo Html::submitButton('Append', ['name' => 'Submit','class' => 'btn btn-primary']);
 echo Html::endForm();
 ?>
+<?php $this->endContent();

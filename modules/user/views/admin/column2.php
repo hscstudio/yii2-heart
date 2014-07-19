@@ -1,23 +1,30 @@
-Layout
----------
-in @app\views\layouts\main.php
-please use class css container-fluid not container
-
-for make 2 column layouts, You should create a file column2.php, this use adminLTE style.
-```php
 <?php
 use yii\helpers\Html;
+use hscstudio\heart\widgets\NavSide;
 use hscstudio\heart\widgets\Breadcrumbs;
+/**
+ * @var \yii\web\View $this
+ * @var string $content
+ */
 ?>
-<?php $this->beginContent('@app/views/layouts/main.php'); ?>
+
 <div class="wrapper row-offcanvas row-offcanvas-left">
+    <!-- Left side column. contains the logo and sidebar -->
     <aside class="left-side sidebar-offcanvas">                
+        <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-			<!-- Add menu or navigation here -->
+			<?= NavSide::widget([
+				'items' => [
+					['label' => Yii::t('user', 'Manage Users'), 'url' => ['/user/admin/index']],
+				]
+			]) ?>
         </section>
+        <!-- /.sidebar -->
     </aside>
 
+    <!-- Right side column. Contains the navbar and content of the page -->
     <aside class="right-side">   
+        <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1><?= Html::encode($this->title) ?></h1>
         </section>
@@ -27,14 +34,6 @@ use hscstudio\heart\widgets\Breadcrumbs;
         <!-- Main content -->
         <section class="content">
             <?= $content ?>
-        </section>
-    </aside>
-</div>
-<?php $this->endContent();
-
-```
-
-And then in controller that use variabel layout and set it to be column2
-```php
-public $layout="column2";
-```
+        </section><!-- /.content -->
+    </aside><!-- /.right-side -->
+</div><!-- ./wrapper -->

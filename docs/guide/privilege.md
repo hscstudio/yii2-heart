@@ -1,48 +1,38 @@
 Privilege
 ---------
 
+Privilege only wrapper of yii2-admin, for detail informations You should read https://github.com/mdmsoft/yii2-admin
+
 Configuration
 ---------
-In common config  /common/config/main.php
-```php
-return [
-  ...
-  'components' => [
-    ....
-    'authManager' => [
-      'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
-    ]
-  ],
-];
-```
-
 In app config  @app\config\main.php
 ```php
 return [
-  'bootstrap' => [    
-    ...
-    'privilege',
-    ...
-  ],
   'modules' => [
     ...
-    'privilege' => [
-      'class' => 'hscstudio\heart\modules\admin\Module',
-      'allowActions' => [
-        'debug/*',
-        'site/*',
-        'gii/*',
-        'privilege/*', // add or remove allowed actions to this list
-      ]
+    'heart' => [
+      'class' => 'hscstudio\heart\Module',
+	  'features'=>[
+			...
+			'privilege'=>[
+				'allowActions' => [
+					'debug/*',
+					'site/*',
+					'gii/*',
+					'user/*',
+					'privilege/*', // add or remove allowed actions to this list
+				],
+				'authManagerClass' => [
+				  'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
+				]
+			],
+			...
+	  ]
     ]
     ...
   ],
   ...
 ];
-```
-Please migrate if You use DBManager
-```
-yii migrate --migrationPath=@yii/rbac/migrations/
 ```
 
 Assigment
@@ -83,19 +73,19 @@ role and permision then return menus that he has access.
 
 To use menu manager (optional). Execute yii migration
 ```
-yii migrate --migrationPath=@hscstudio/heart/modules/admin/migration
+yii migrate --migrationPath=@hscstudio/heart/migrations
 ```
 
 ```php
-use hscstudio\heart\modules\admin\components\AccessHelper;
+use hscstudio\heart\modules\admin\components\MenuHelper;
 use hscstudio\heart\widgets\Nav;
 
 echo Nav::widget([
-    'items' => AccessHelper::getAssignedMenu(Yii::$app->user->id)
+    'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id)
 ]);
 
 ```
-Return of `hscstudio\heart\modules\admin\components\AccessHelper::getAssignedMenu()` has default format like:
+Return of `hscstudio\heart\modules\admin\components\MenuHelper::getAssignedMenu()` has default format like:
 ```php
 [
     [
@@ -123,7 +113,7 @@ Return of `hscstudio\heart\modules\admin\components\AccessHelper::getAssignedMen
 ]
 ```
 where `$menu` variable corresponden with a record of table `menu`. You can customize 
-return format of `hscstudio\heart\modules\admin\components\AccessHelper::getAssignedMenu()` by provide a callback to this methode.
+return format of `hscstudio\heart\modules\admin\components\MenuHelper::getAssignedMenu()` by provide a callback to this methode.
 The callback must have format `function($menu){}`. E.g:
 ```php
 $callback = function($menu){
@@ -137,12 +127,12 @@ $callback = function($menu){
     ]
 }
 
-$items = AccessHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
+$items = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
 ```
 Default result is get from `cache`. If you want to force regenerate, provide boolean `true` as forth parameter.
 
 
-Second parameter of `hscstudio\heart\modules\admin\components\AccessHelper::getAssignedMenu()` used to get menu on it's own hierarchy.
+Second parameter of `hscstudio\heart\modules\admin\components\MenuHelper::getAssignedMenu()` used to get menu on it's own hierarchy.
 E.g. Your menu structure:
 
 * Side Menu
@@ -165,7 +155,7 @@ E.g. Your menu structure:
 
 You can get 'Side Menu' chldren by calling
 ```php
-$items = AccessHelper::getAssignedMenu(Yii::$app->user->id, $sideMenuId);
+$items = MenuHelper::getAssignedMenu(Yii::$app->user->id, $sideMenuId);
 ```
 It will result in
 * Menu 1

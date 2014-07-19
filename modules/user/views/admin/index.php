@@ -20,9 +20,9 @@ use yii\grid\GridView;
 $this->title = Yii::t('user', 'Manage users');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/layouts/column2.php'); ?>
-<h1><?= Html::encode($this->title) ?> <?= Html::a(Yii::t('user', 'Create a user account'), ['create'], ['class' => 'btn btn-success']) ?></h1>
-
+<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
+<?= Html::a(Yii::t('user', 'Create a user account'), ['create'], ['class' => 'btn btn-success']) ?>
+<hr>
 <?php if (Yii::$app->getSession()->hasFlash('admin_user')): ?>
     <div class="alert alert-success">
         <p><?= Yii::$app->getSession()->getFlash('admin_user') ?></p>

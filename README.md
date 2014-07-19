@@ -9,16 +9,19 @@ Warning : This extension under development or PUBLIC PREVIEW :)
 Roadmap
 ------------
 Done
-- Integrate Yii2-admin
-- Wrap Arshaw Calendar
+- Wrap Yii2-user (https://github.com/dektrium/yii2-user)
+- Wrap Yii2-admin (https://github.com/mdmsoft/yii2-admin)
+- Wrap Arshaw Calendar 
 - Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
+- Database Migration
+
 ```
 $objPHPExcel = new \PHPExcel();
 ```
 
 Progress..
 - Wrap adminLTE -> create widget content
-  (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs)
+  (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs, Box)
 
 Waiting
 - Wrap TCPDF or FPDF
@@ -47,6 +50,12 @@ or add
 
 to the require section of your `composer.json` file.
 
+Database migration
+
+```
+yii migrate migrationPath=@hscstudio\heart\migrations
+```
+
 
 Usage
 -----
@@ -62,6 +71,9 @@ return [
 	'modules' => [
 		'heart' => [
 			'class' => 'hscstudio\heart\Module',
+			'features'=>[
+				'fontawesome',
+			]
 		],
 		...
 	],
