@@ -94,13 +94,14 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					]
 				]);
 			
-			$this->allowActions = isset($this->features['privilege']['allowActions'])?$this->features['privilege']['allowActions']:['debug/*',
+			$app->getModule('privilege')->allowActions = isset($this->features['privilege']['allowActions'])?$this->features['privilege']['allowActions']:['debug/*',
                 'site/*',
                 'gii/*',
                 'privilege/*',
                 'user/*', // add or remove allowed actions to this list
 			];
-			\mdm\admin\Module::bootstrap($app);
+			
+			$app->getModule('privilege')->bootstrap();
 			
 			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';
 		}
