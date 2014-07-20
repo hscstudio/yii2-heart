@@ -14,7 +14,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
      *
      * @var array 
      */
-    public $allowActions = [];
+    //public $allowActions = [];
 	
 	public $features=[
 		'fontawesome'=>true,
@@ -101,7 +101,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
                 'user/*', // add or remove allowed actions to this list
 			];
 			
-			$app->getModule('privilege')->bootstrap();
+			$app->getModule('privilege')->bootstrap($app);
 			
 			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';
 		}
