@@ -83,30 +83,38 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		}
 		
 		if(isset($this->features['privilege'])){	
-			$app->set('authManager', [
-					'class' => isset($this->features['privilege']['authManagerClass'])?$this->features['privilege']['authManagerClass']:'yii\rbac\DbManager',
-					]
-				);
+			$authManager = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'authManager', [
+					'class' => 'yii\rbac\DbManager',
+			]);
+			$allowActions = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'allowActions', [
+					'debug/*',
+					'site/*',
+					'gii/*',
+					'privilege/*',
+					'user/*', // add or remove allowed actions to this list
+			]);
+			$app->set('authManager', $authManager);
+	 
+			$app->setModule('privilege', array_merge([
+				'class' => 'mdm\admin\Module',
+					], $this->features['privilege']));
+	 
+			$app->attachBehavior('access', [
+				'class' => 'mdm\admin\components\AccessControl',
+				'allowActions' => $allowActions,
+			]);
 			
-			$app->setModules([
-				'privilege'=>[
-						'class' => 'mdm\admin\Module',
-					]
-				]);
-			
-			$app->getModule('privilege')->allowActions = isset($this->features['privilege']['allowActions'])?$this->features['privilege']['allowActions']:['debug/*',
-                'site/*',
-                'gii/*',
-                'privilege/*',
-                'user/*', // add or remove allowed actions to this list
-			];
-			
-			$app->getModule('privilege')->bootstrap($app);
+			//$app->getModule('privilege')->bootstrap($app);
 			
 			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';
 		}
 		
-		$view->theme->pathMap = $pathMap;		
+		if (!empty($pathMap)) {
+			$view->theme = Yii::createObject([
+					'class' => 'yii\base\Theme',
+					'pathMap' => $pathMap
+			]);
+		}	
 		
 		$assets = $view->assetManager->publish('@hscstudio/heart/assets/heart');
 		$view->registerCssFile($assets[1].'/css/heart.css', ['yii\bootstrap\BootstrapAsset']);
