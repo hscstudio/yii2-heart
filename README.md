@@ -72,8 +72,7 @@ return [
 		'heart' => [
 			'class' => 'hscstudio\heart\Module',
 			'features'=>[
-				'fontawesome'=>true,
-				'gii'=>true,
+				'fontawesome',
 			]
 		],
 		...
