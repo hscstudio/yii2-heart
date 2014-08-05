@@ -1,8 +1,7 @@
-Fullcalendar
----------
-
-BASIC GUIDE
-----
+### Fullcalendar ### 
+---
+#### BASIC GUIDE ####
+---
 ```php
 	use hscstudio\heart\widgets\FullCalendar;
 	echo FullCalendar::widget([
@@ -40,8 +39,8 @@ BASIC GUIDE
     ]);
 ```
 
-ADVANCED USAGE
-----
+#### ADVANCED USAGE ####
+---
 Dynamic event via controller
 ```php
 	// In view

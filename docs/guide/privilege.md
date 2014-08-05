@@ -1,10 +1,9 @@
-Privilege
----------
-
+## Privilege ##
+---
 Privilege only wrapper of yii2-admin, for detail informations You should read https://github.com/mdmsoft/yii2-admin
 
-Configuration
----------
+### Configuration ###
+---
 In app config  @app\config\main.php
 ```php
 return [
@@ -35,26 +34,26 @@ return [
 ];
 ```
 
-Assigment
----------
+### Assigment ### 
+---
 Assigment menu used for grant or revoke role to/from user.
 
-Role
-----
+### Role ### 
+---
 Role menu used for manage role. You can create, delete or update role from this menu.
 Adding and remove child of role can be doing there.
 
-Permision
----------
+### Permision ### 
+---
 
 
-Route
------
+### Route ### 
+---
 Route is list of avaliable route of your application. It is automatic read application structure.
 Click button '>>' to save it and button '<<' to delete.
 
-Rule
-----
+### Rule ### 
+---
 see [Rules](http://www.yiiframework.com/doc-2.0/guide-authorization.html#using-rules).
 
 You can then access Auth manager through the following URL:
@@ -65,8 +64,8 @@ http://localhost/path/to/index.php?r=privilege
 See [Yii RBAC](http://www.yiiframework.com/doc-2.0/guide-authorization.html#role-based-access-control-rbac) for more detail.
 
 
-Using Menu
-----------
+### Using Menu ### 
+---
 
 Menu manager used for build hierarchical menu. This is automatically look of user 
 role and permision then return menus that he has access.

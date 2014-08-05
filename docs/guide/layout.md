@@ -1,5 +1,4 @@
-Layout
----------
+## Layout ##
 in @app\views\layouts\main.php
 please use class css container-fluid not container
 

@@ -1,9 +1,9 @@
-Widget
----------
+## Widget ##
+---
 Usage widget in view
 
-Navbar & Nav
-----
+### Navbar & Nav ### 
+---
 ```php
 use hscstudio\heart\widgets\Nav;
 use hscstudio\heart\widgets\NavBar;
@@ -28,8 +28,8 @@ echo Nav::widget([
 NavBar::end();
 ```
 
-NavSide
-----
+### NavSide ### 
+---
 
 Sidebar menu adminLTE like.. :)
 ```php
@@ -59,8 +59,8 @@ echo NavSide::widget([
 ?>
 ```
 
-Breadcrumbs
-----
+### Breadcrumbs ### 
+---
 ```php
 use hscstudio\heart\widgets\Breadcrumbs;
 <?= Breadcrumbs::widget([
@@ -68,8 +68,8 @@ use hscstudio\heart\widgets\Breadcrumbs;
 ]) ?>
 ```
 
-Box
-----
+### Box ### 
+---
 @see http://almsaeedstudio.com/AdminLTE/pages/widgets.html
 ```
 Box::begin([
@@ -95,6 +95,6 @@ Box::begin([
 Box::end();
 ```
 
-FullCalendar
-----
+### FullCalendar ### 
+---
 [FullCalendar](fullcalendar.md)
