@@ -19,7 +19,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		'fontawesome'=>true, // use false for not use it
 		'datecontrol'=>true,// use false for not use it
 		'gridview'=>true,// use false for not use it
-		'gii'=>[], // use false for not use it
+		'gii'=>true, // use false for not use it
 		'privilege'=>[],// use false for not use it
 		'user'=>[]	// use false for not use it
 	];
@@ -51,28 +51,28 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		if(@$this->features['datecontrol']!=false){		
 			$app->setModules([
 				'datecontrol' => [
-					'class' => 'kartik\datecontrol\Module',			 
+					'class' => '\kartik\datecontrol\Module',			 
 					// format settings for displaying each date attribute
 					'displaySettings' => [
-						kartik\datecontrol\Module::FORMAT_DATE => 'd-M-Y',
-						kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s A',
-						kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s A',
+						\kartik\datecontrol\Module::FORMAT_DATE => 'd-M-Y',
+						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s A',
+						\kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s A',
 					],			 
 					// format settings for saving each date attribute
 					'saveSettings' => [
-						kartik\datecontrol\Module::FORMAT_DATE => 'Y-m-d', // U if saves as unix timestamp
-						kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
-						kartik\datecontrol\Module::FORMAT_DATETIME => 'Y-m-d H:i:s',
+						\kartik\datecontrol\Module::FORMAT_DATE => 'Y-m-d', // U if saves as unix timestamp
+						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
+						\kartik\datecontrol\Module::FORMAT_DATETIME => 'Y-m-d H:i:s',
 					],			 
 					// automatically use kartik\widgets for each of the above formats
 					'autoWidget' => true,			 
 					// default settings for each widget from kartik\widgets used when autoWidget is true
 					'autoWidgetSettings' => [
-						kartik\datecontrol\Module::FORMAT_DATE => [
+						\kartik\datecontrol\Module::FORMAT_DATE => [
 							'type'=>2, 'pluginOptions'=>['autoClose'=>true]
 						],
-						kartik\datecontrol\Module::FORMAT_DATETIME => [], // setup if needed
-						kartik\datecontrol\Module::FORMAT_TIME => [], // setup if needed
+						\kartik\datecontrol\Module::FORMAT_DATETIME => [], // setup if needed
+						\kartik\datecontrol\Module::FORMAT_TIME => [], // setup if needed
 					],
 				]
 			]);
@@ -112,7 +112,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		if(@$this->features['user']!=false){			
 			$app->setModule('user', 
 				yii\helpers\ArrayHelper::merge([ // bisa juga pake yii\helpers\ArrayHelper::merge
-					'class' => 'dektrium\user\Module',
+					'class' => '\dektrium\user\Module',
 					'confirmable' => false,
 					'confirmWithin' => 86400,
 					'allowUnconfirmedLogin' => true,
@@ -140,11 +140,11 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			$app->set('authManager', $authManager);
 	 
 			$app->setModule('privilege', array_merge([
-				'class' => 'mdm\admin\Module',
+				'class' => '\mdm\admin\Module',
 					], $this->features['privilege']));
 	 
 			$app->attachBehavior('access', [
-				'class' => 'mdm\admin\components\AccessControl',
+				'class' => '\mdm\admin\components\AccessControl',
 				'allowActions' => $allowActions,
 			]);
 			

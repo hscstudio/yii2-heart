@@ -72,9 +72,13 @@ return [
 		'heart' => [
 			'class' => 'hscstudio\heart\Module',
 			'features'=>[
-				// default on all features:
-				// fontawesome, datecontrol (kartik), gridview (kartik), gii, privilege (yii2-admin), user (yii2-user)
-			]
+				// fontawesome, datecontrol (kartik), gridview (kartik), gii, 
+				'fontawesome'=>true, // use false for not use it
+				'datecontrol'=>true,// use false for not use it
+				'gridview'=>true,// use false for not use it
+				'gii'=>true, // use false for not use it
+				// privilege (yii2-admin), user (yii2-user) please read guide
+			],
 		],
 		...
 	],
