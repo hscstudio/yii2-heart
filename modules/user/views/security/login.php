@@ -22,7 +22,7 @@ use dektrium\user\widgets\Connect;
 $this->title = Yii::t('user', 'Sign in');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
+<div class="row" style="margin-top:15px;">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?= $form->field($model, 'login') ?>
 
-                <?= $form->field($model, 'password')->passwordInput()->label(Yii::t('user', 'Password') . ' (' . Html::a(Yii::t('user', 'Forgot password?'), ['/user/recovery/request']) . ')') ?>
+                <?= $form->field($model, 'password')->passwordInput()->label(Yii::t('user', 'Password')) ?>
 
                 <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
@@ -45,6 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
         <p class="text-center">
+			<?= Html::a(Yii::t('user', 'Forgot password?'), ['/user/recovery/request']) ?><br>
             <?= Html::a(Yii::t('user', 'Didn\'t receive confirmation message?'), ['/user/registration/resend']) ?>
         </p>
         <?= Connect::widget([

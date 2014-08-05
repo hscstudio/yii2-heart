@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Connect your account to {0}', $account->provider);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
+<div class="row" style="margin-top:15px;">
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
             <div class="panel-heading">

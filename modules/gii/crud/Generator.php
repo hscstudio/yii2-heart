@@ -232,11 +232,50 @@ class Generator extends \yii\gii\Generator
             }
         }
         $column = $tableSchema->columns[$attribute];
+		
+		/*
+		Hide created, modified, createdBy, modifiedBy, deleted, deletedBy
+		*/
+		if (preg_match('/^(created)$/i', $column->name) && $column->type === 'datetime') return '""//'.$column->name.'';
+		if (preg_match('/^(modified)$/i', $column->name) && $column->type === 'datetime') return '""//'.$column->name.'';
+		if (preg_match('/^(deleted)$/i', $column->name) && $column->type === 'datetime') return '""//'.$column->name.'';
+		if (preg_match('/^(createdBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
+		if (preg_match('/^(modifiedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
+		if (preg_match('/^(deletedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
+		if ($column->type === 'smallint' or ($column->type === 'integer' && $column->size<=3)){
+			$dropDownOptions = [];
+			if(preg_match('/^(status)$/i', $column->name)) $dropDownOptions = ['1'=>'Active','0'=>'Inactive'];
+			else if(preg_match('/^(gender)$/i', $column->name)) $dropDownOptions = ['1'=>'Male','0'=>'Female'];			
+			if(!empty($dropDownOptions)){
+				return "\$form->field(\$model, '$attribute')->dropDownList("
+					. preg_replace("/\n\s*/", ' ', VarDumper::export($dropDownOptions)).", ['prompt' => 'Choose ".$column->name."'])";
+			}
+		}
+		
         if ($column->phpType === 'boolean') {
             return "\$form->field(\$model, '$attribute')->checkbox()";
         } elseif ($column->type === 'text') {
             return "\$form->field(\$model, '$attribute')->textarea(['rows' => 6])";
-        } else {
+        } else {			
+			if (preg_match('/^(email|mail)$/i', $column->name)) {
+				return "\$form->field(\$model, '$attribute', [
+					 'inputTemplate' => '<div class=\"input-group\"><span class=\"input-group-addon\">@</span>{input}</div>',
+				 ]);";
+			}
+			
+			// Usage with model and Active Form (with no default initial value)
+			if ($column->type === 'date'){
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\DatePicker::classname(), [
+					'options' => ['placeholder' => 'Enter date ...'],
+					'type' => \kartik\widgets\DatePicker::TYPE_COMPONENT_APPEND,
+					'convertFormat'=>true,
+					'pluginOptions' => [
+						'autoclose'=>true,
+						'format' => 'y-m-d'
+					]
+				]);";
+			}
+			
             if (preg_match('/^(password|pass|passwd|passcode)$/i', $column->name)) {
                 $input = 'passwordInput';
             } else {

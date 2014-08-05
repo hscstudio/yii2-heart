@@ -22,7 +22,7 @@ return [
 					'user/*',
 					'privilege/*', // add or remove allowed actions to this list
 				],
-				'authManagerClass' => [
+				'authManager' => [
 				  'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
 				]
 			],
@@ -71,10 +71,6 @@ Using Menu
 Menu manager used for build hierarchical menu. This is automatically look of user 
 role and permision then return menus that he has access.
 
-To use menu manager (optional). Execute yii migration
-```
-yii migrate --migrationPath=@hscstudio/heart/migrations
-```
 
 ```php
 use hscstudio\heart\modules\admin\components\MenuHelper;
