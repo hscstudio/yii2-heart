@@ -1,14 +1,13 @@
-# Index #
+# Index
 ---
-## Layout ## 
+## Layout
   - [Layout](layout.md) 
-  - ---
 
-## Widget ## 
+## Widget
   - [Widget](widget.md)
   - [Fullcalendar](fullcalendar.md)
-  - ---
-## Modules ## 
+
+## Modules
   - [privilege](privilege.md)
   - [user](user.md)
-  - ---
+
