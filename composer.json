@@ -14,8 +14,9 @@
 		"yiisoft/yii2-jui": "*",
 		"dektrium/yii2-user": "*",
 		"mdmsoft/yii2-admin": "*",
-		"kartik-v/yii2-widgets": "dev-master",
+		"kartik-v/yii2-datecontrol": "dev-master",
 		"kartik-v/yii2-grid": "dev-master",
+		"kartik-v/yii2-helpers": "dev-master",
 		"phpoffice/phpexcel": "dev-master",
 		"phpoffice/phpword": "dev-master"
 	},

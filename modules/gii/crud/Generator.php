@@ -243,9 +243,24 @@ class Generator extends \yii\gii\Generator
 		if (preg_match('/^(modifiedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
 		if (preg_match('/^(deletedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
 		if ($column->type === 'smallint' or ($column->type === 'integer' && $column->size<=3)){
-			$dropDownOptions = [];
-			if(preg_match('/^(status)$/i', $column->name)) $dropDownOptions = ['1'=>'Active','0'=>'Inactive'];
-			else if(preg_match('/^(gender)$/i', $column->name)) $dropDownOptions = ['1'=>'Male','0'=>'Female'];			
+		    if(preg_match('/^(gender)$/i', $column->name)){
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\SwitchInput::classname(), [
+					'pluginOptions' => [
+						'onText' => 'Male',
+						'offText' => 'Female',
+					]
+				])";
+				
+			}
+			if($column->size==1){
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\SwitchInput::classname(), [
+					'pluginOptions' => [
+						'onText' => 'On',
+						'offText' => 'Off',
+					]
+				])";
+			}
+			$dropDownOptions = ['0'=>'Option1','1'=>'Option2','2'=>'Option3'];		
 			if(!empty($dropDownOptions)){
 				return "\$form->field(\$model, '$attribute')->dropDownList("
 					. preg_replace("/\n\s*/", ' ', VarDumper::export($dropDownOptions)).", ['prompt' => 'Choose ".$column->name."'])";
@@ -253,7 +268,7 @@ class Generator extends \yii\gii\Generator
 		}
 		
         if ($column->phpType === 'boolean') {
-            return "\$form->field(\$model, '$attribute')->checkbox()";
+            return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\SwitchInput::classname(), [])";
         } elseif ($column->type === 'text') {
             return "\$form->field(\$model, '$attribute')->textarea(['rows' => 6])";
         } else {			
@@ -265,14 +280,23 @@ class Generator extends \yii\gii\Generator
 			
 			// Usage with model and Active Form (with no default initial value)
 			if ($column->type === 'date'){
-				return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\DatePicker::classname(), [
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
 					'options' => ['placeholder' => 'Enter date ...'],
-					'type' => \kartik\widgets\DatePicker::TYPE_COMPONENT_APPEND,
-					'convertFormat'=>true,
-					'pluginOptions' => [
-						'autoclose'=>true,
-						'format' => 'y-m-d'
-					]
+					'type' => \kartik\datecontrol\DateControl::FORMAT_DATE,
+				]);";
+			}
+			
+			if ($column->type === 'datetime'){
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
+					'options' => ['placeholder' => 'Enter datetime ...'],
+					'type' => \kartik\datecontrol\DateControl::FORMAT_DATETIME,
+				]);";
+			}
+			
+			if ($column->type === 'time'){
+				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
+					'options' => ['placeholder' => 'Enter time ...'],
+					'type' => \kartik\datecontrol\DateControl::FORMAT_TIME,
 				]);";
 			}
 			
@@ -281,15 +305,21 @@ class Generator extends \yii\gii\Generator
             } else {
                 $input = 'textInput';
             }
+			
             if (is_array($column->enumValues) && count($column->enumValues) > 0) {
                 $dropDownOptions = [];
                 foreach ($column->enumValues as $enumValue) {
                     $dropDownOptions[$enumValue] = Inflector::humanize($enumValue);
                 }
                 return "\$form->field(\$model, '$attribute')->dropDownList("
-                    . preg_replace("/\n\s*/", ' ', VarDumper::export($dropDownOptions)).", ['prompt' => ''])";
+                    . preg_replace("/\n\s*/", ' ', VarDumper::export($dropDownOptions)).", ['prompt' => ''])";			
             } elseif ($column->phpType !== 'string' || $column->size === null) {
                 return "\$form->field(\$model, '$attribute')->$input()";
+			} elseif ($column->phpType == 'string' && $column->size === 255 && 
+					preg_match('/^(document|document1|document2|photo|image|picture|file)$/i', $column->name)) {
+                return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\FileInput::classname(), [
+					'pluginOptions' => ['previewFileType' => 'any']
+					]);";
             } else {
                 return "\$form->field(\$model, '$attribute')->$input(['maxlength' => $column->size])";
             }

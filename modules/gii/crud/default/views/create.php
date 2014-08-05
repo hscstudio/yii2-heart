@@ -18,6 +18,11 @@ use yii\helpers\Html;
 $this->title = <?= $generator->generateString('Create {modelClass}', ['modelClass' => Inflector::camel2words(StringHelper::basename($generator->modelClass))]) ?>;
 $this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>, 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+
+echo \kartik\widgets\AlertBlock::widget([
+    'useSessionFlash' => true,
+    'type' => \kartik\widgets\AlertBlock::TYPE_ALERT
+]);
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-create">
 

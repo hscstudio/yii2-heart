@@ -17,6 +17,8 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 	
 	public $features=[
 		'fontawesome'=>true,
+		'datecontrol'=>true,
+		'gridview'=>true,
 		'gii'=>[],
 		'privilege'=>[],
 		'user'=>[]	
@@ -45,6 +47,44 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		
 		$view = $app->getView();
 		$pathMap=[];
+			
+		if(isset($this->features['datecontrol'])){		
+			$app->setModules([
+				'datecontrol' => [
+					'class' => 'kartik\datecontrol\Module',			 
+					// format settings for displaying each date attribute
+					'displaySettings' => [
+						kartik\datecontrol\Module::FORMAT_DATE => 'd-M-Y',
+						kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s A',
+						kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s A',
+					],			 
+					// format settings for saving each date attribute
+					'saveSettings' => [
+						kartik\datecontrol\Module::FORMAT_DATE => 'Y-m-d', // U if saves as unix timestamp
+						kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
+						kartik\datecontrol\Module::FORMAT_DATETIME => 'Y-m-d H:i:s',
+					],			 
+					// automatically use kartik\widgets for each of the above formats
+					'autoWidget' => true,			 
+					// default settings for each widget from kartik\widgets used when autoWidget is true
+					'autoWidgetSettings' => [
+						kartik\datecontrol\Module::FORMAT_DATE => [
+							'type'=>2, 'pluginOptions'=>['autoClose'=>true]
+						],
+						kartik\datecontrol\Module::FORMAT_DATETIME => [], // setup if needed
+						kartik\datecontrol\Module::FORMAT_TIME => [], // setup if needed
+					],
+				]
+			]);
+		}
+		
+		if(isset($this->features['gridview'])){		
+			$app->setModules([
+				'gridview' => [
+					'class' => '\kartik\grid\Module',
+				]
+			]);
+		}
 		
 		if(isset($this->features['gii'])){		
 			$app->setModules([
