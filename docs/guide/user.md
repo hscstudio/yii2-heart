@@ -3,7 +3,7 @@
 
 User only wrapper of yii2-user, for detail informations You should read https://github.com/dektrium/yii2-user
 
-### Configuration ### 
+### Configuration ###
 ---
 In app config  @app\config\main.php
 ```php
