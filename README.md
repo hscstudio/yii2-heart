@@ -12,6 +12,7 @@ Done
 - Wrap Yii2-user (https://github.com/dektrium/yii2-user)
 - Wrap Yii2-admin (https://github.com/mdmsoft/yii2-admin)
 - Wrap Arshaw Calendar 
+- Use Kartik-v Extension
 - Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
 - Database Migration
 
@@ -22,14 +23,13 @@ $objPHPExcel = new \PHPExcel();
 Progress..
 - Wrap adminLTE -> create widget content
   (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs, Box)
+- Create Gii Improved base on this extension
 
 Waiting
 - Wrap TCPDF or FPDF
 - Wrap TinyButStrong
 - Wrap Highchart
-- Create Widget Export Excel, Word, Pdf
-- Create Widget Import Excel
-- Create Gii Improved base on this extension
+
 
 Installation
 ------------
