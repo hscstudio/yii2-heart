@@ -104,6 +104,12 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 								'my' => '@hscstudio/heart/modules/gii/model/default',
 							]
 						],
+						'module' => [
+							'class' => 'hscstudio\heart\modules\gii\module\Generator',
+							'templates' => [
+								'my' => '@hscstudio/heart/modules/gii/module/default',
+							]
+						],
 					],
 				]
 			]);
