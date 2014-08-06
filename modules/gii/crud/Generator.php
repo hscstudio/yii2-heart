@@ -116,21 +116,18 @@ class Generator extends \yii\gii\generators\crud\Generator
 			// Usage with model and Active Form (with no default initial value)
 			if ($column->type === 'date'){
 				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
-					'options' => ['placeholder' => 'Enter date ...'],
 					'type' => \kartik\datecontrol\DateControl::FORMAT_DATE,
 				]);";
 			}
 			
 			if ($column->type === 'datetime'){
 				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
-					'options' => ['placeholder' => 'Enter datetime ...'],
 					'type' => \kartik\datecontrol\DateControl::FORMAT_DATETIME,
 				]);";
 			}
 			
 			if ($column->type === 'time'){
 				return "\$form->field(\$model, '$attribute')->widget(\kartik\datecontrol\DateControl::classname(), [
-					'options' => ['placeholder' => 'Enter time ...'],
 					'type' => \kartik\datecontrol\DateControl::FORMAT_TIME,
 				]);";
 			}
