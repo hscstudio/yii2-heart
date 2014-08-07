@@ -21,8 +21,11 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Update user account');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['sideMenu'] = [
+	['icon'=>'user', 'label' => Yii::t('user', 'Manage Users'), 'url' => ['/user/admin/index']]
+];
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 <h1><i class="glyphicon glyphicon-user"></i> <?= Html::encode($model->username) ?>
     <?php if (!$model->getIsConfirmed()): ?>
         <?= Html::a(Yii::t('user', 'Confirm'), ['confirm', 'id' => $model->id], ['class' => 'btn btn-success btn-xs', 'data-method' => 'post']) ?>

@@ -21,18 +21,22 @@ use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView" : "yii
 
 $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
 $this->params['breadcrumbs'][] = $this->title;
+
+$controller = $this->context;
+$menus = $controller->module->getMenuItems();
+$this->params['sideMenu']=$menus;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
 
-    <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
+    <!-- <h1><?= "<?= " ?>Html::encode($this->title) ?></h1> -->
 <?php if(!empty($generator->searchModelClass)): ?>
 <?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
 <?php endif; ?>
-
+	<!--
     <p>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Create {modelClass}', ['modelClass' => Inflector::camel2words(StringHelper::basename($generator->modelClass))]) ?>, ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+	-->
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
         'dataProvider' => $dataProvider,
@@ -50,19 +54,96 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
         }
     }
 } else {
+	$count=0;
     foreach ($tableSchema->columns as $column) {
         $format = $generator->generateColumnFormat($column);
-        if (++$count < 6) {
+		if ($count < 6) {
+			/* 
+			 * Remove Prefix Tabel 
+			 * tbl_ ref_ tb_		 
+			 */
+			$names = explode('_',$column->name);
+			if(count($names>0) and in_array($names[0],['tbl','tb','ref'])){
+				$new_name=substr($column->name,strlen($names[0]),strlen($column->name));
+				$new_name=substr($new_name,0,strlen($new_name)-3);
+				$new_name=\yii\helpers\Inflector::camelize($new_name);
+				$new_name=lcfirst($new_name);
+				echo "            /*
+				[
+					'attribute' => '".$column->name."',
+					'value' => function (\$data) {
+						return \$data->".$new_name."->name;
+					}
+				],
+				*/\n";
+			}
+			else if($column->name=='id'){
+				echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+			}
+			else{				
+				/*if($column->type=='date'){
+				echo "            
+				[
+					'class' => 'kartik\grid\EditableColumn',
+					'attribute' => '".$column->name."',
+					'pageSummary' => 'Page Total',
+					'vAlign'=>'middle',
+					'headerOptions'=>['class'=>'kv-sticky-column'],
+					'contentOptions'=>['class'=>'kv-sticky-column'],
+					'editableOptions'=>[
+						'header'=>'".ucfirst($column->name)."', 
+						'size'=>'md',
+						'formOptions'=>['action'=>\yii\helpers\Url::to('/editable')],
+						'inputType' => 'Editable::INPUT_DATE',
+						'options'=>[
+							'pluginOptions' => [
+								'format' => 'dd-M-yyyy',
+								'todayHighlight' => true
+							]
+						]	
+					]
+				],\n";
+				}
+				else */
+				if($format==='text'){
+				echo "            
+				[
+					'class' => 'kartik\grid\EditableColumn',
+					'attribute' => '".$column->name."',
+					'pageSummary' => 'Page Total',
+					'vAlign'=>'middle',
+					'headerOptions'=>['class'=>'kv-sticky-column'],
+					'contentOptions'=>['class'=>'kv-sticky-column'],
+					'editableOptions'=>['header'=>'".ucfirst($column->name)."', 'size'=>'md','formOptions'=>['action'=>\yii\helpers\Url::to('editable')]]
+				],\n";
+				}
+				else{
+				echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+				}
+				$count++;
+			}				
+		}
+        /*if (++$count < 6) {
             echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
         } else {
             echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
-        }
+        }*/
     }
 }
 ?>
 
             ['class' => 'kartik\grid\ActionColumn'],
         ],
+		'panel' => [
+			//'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-globe"></i> <?= Inflector::camel2words(StringHelper::basename($generator->modelClass)); ?></h3>',
+			'heading'=>'<h3 class="panel-title"><i class="glyphicon glyphicon-globe"></i></h3>',
+			//'type'=>'primary',
+			'before'=>Html::a('<i class="glyphicon glyphicon-plus"></i> Create <?= Inflector::camel2words(StringHelper::basename($generator->modelClass)); ?>', ['create'], ['class' => 'btn btn-success']),
+			'after'=>Html::a('<i class="glyphicon glyphicon-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
+			'showFooter'=>false
+		],
+		'responsive'=>true,
+		'hover'=>true,
     ]); ?>
 <?php else: ?>
     <?= "<?= " ?>ListView::widget([

@@ -19,6 +19,7 @@ echo "<?php\n";
 use yii\helpers\Html;
 //use yii\widgets\ActiveForm;
 use yii\bootstrap\ActiveForm;
+use kartik\widgets\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model <?= ltrim($generator->modelClass, '\\') ?> */
@@ -27,7 +28,7 @@ use yii\bootstrap\ActiveForm;
 
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-form">
 
-    <?= "<?php " ?>$form = ActiveForm::begin(); ?>
+    <?= "<?php " ?>$form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 	<?= "<?=" ?> $form->errorSummary($model) ?> <!-- ADDED HERE -->
 	
 <?php foreach ($safeAttributes as $attribute) {

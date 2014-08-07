@@ -12,8 +12,11 @@ use yii\widgets\ActiveForm;
 $this->title = 'Create Route';
 $this->params['breadcrumbs'][] = ['label' => 'Routes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$controller = $this->context;
+$menus = $controller->module->menus;
+$this->params['sideMenu']=$menus;
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 
 <div class="create">
 

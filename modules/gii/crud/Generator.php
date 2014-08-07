@@ -25,7 +25,7 @@ use yii\web\Controller;
  */
 class Generator extends \yii\gii\generators\crud\Generator
 {
-
+	public $layout;
     /**
      * @inheritdoc
      */
@@ -77,7 +77,25 @@ class Generator extends \yii\gii\generators\crud\Generator
 		if (preg_match('/^(createdBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
 		if (preg_match('/^(modifiedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
 		if (preg_match('/^(deletedBy)$/i', $column->name) && $column->type === 'integer') return '""//'.$column->name.'';
-		if ($column->type === 'smallint' or ($column->type === 'integer' && $column->size<=3)){
+		
+		$names = explode('_',$column->name);
+		if(count($names>0) and in_array($names[0],['tbl','tb','ref'])){
+			$new_name=substr($column->name,strlen($names[0]),strlen($column->name));
+			$new_name=substr($new_name,0,strlen($new_name)-3);
+			$new_name=\yii\helpers\Inflector::camelize($new_name);
+			//$new_name=lcfirst($new_name);
+			return "'' ?>\n
+			<?php
+			\$data = \yii\helpers\ArrayHelper::getColumn(\backend\models\\".$new_name."::find()->select('id,name')->all(), 'name');
+			echo \$form->field(\$model, '$attribute')->widget(Select2::classname(), [
+				'data' => \$data,
+				'options' => ['placeholder' => 'Choose ".$new_name." ...'],
+				'pluginOptions' => [
+				'allowClear' => true
+				],
+			]);";
+		}
+		else if ($column->type === 'smallint' or ($column->type === 'integer' && $column->size<=3)){
 		    if(preg_match('/^(gender)$/i', $column->name)){
 				return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\SwitchInput::classname(), [
 					'pluginOptions' => [
@@ -150,12 +168,14 @@ class Generator extends \yii\gii\generators\crud\Generator
 			} elseif ($column->phpType == 'string' && $column->size === 255 && 
 					preg_match('/^(document|document1|document2|photo|image|picture|file)$/i', $column->name)) {
                 return "\$form->field(\$model, '$attribute')->widget(\kartik\widgets\FileInput::classname(), [
-					'pluginOptions' => ['previewFileType' => 'any']
+					'pluginOptions' => [
+						'previewFileType' => 'any',
+						'showUpload' => false,
+						]
 					]);";
             } else {
                 return "\$form->field(\$model, '$attribute')->$input(['maxlength' => $column->size])";
             }
         }
     }
-
 }

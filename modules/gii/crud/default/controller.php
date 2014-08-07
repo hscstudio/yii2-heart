@@ -45,7 +45,13 @@ use yii\filters\VerbFilter;
  */
 class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->baseControllerClass) . "\n" ?>
 {
-    //public $layout = 'column2';
+
+	<?php if($_POST['Generator']['layout']=='column2'){ ?>
+	public $layout = '@hscstudio/heart/views/layouts/column2';
+	<?php } else { ?>
+	public $layout = '@hscstudio/heart/views/layouts/column1';
+	<?php } ?> 
+	
 	public function behaviors()
     {
         return [
@@ -122,14 +128,74 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     public function actionUpdate(<?= $actionParams ?>)
     {
         $model = $this->findModel(<?= $actionParams ?>);
+        $currentFiles=[];
+        <?php
+        $idx2=0;
+        if (($tableSchema = $generator->getTableSchema()) !== false) {
+            foreach ($tableSchema->columns as $column) {
+                if ($column->phpType == 'string' && $column->size === 255 && 
+                    preg_match('/^(document|document1|document2|photo|image|picture|file)$/i', $column->name)) {
+                    ?>
+        $currentFiles[<?= $idx2; ?>]=$model-><?= $column->name ?>;
+                    <?php
+                    $idx2++;
+                }
+            }
+        }
+        ?>
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', <?= $urlParams ?>]);
-        } else {
-            return $this->render('update', [
+        if ($model->load(Yii::$app->request->post())) {
+            $files=[];
+			<?php
+			$idx=0;
+			if (($tableSchema = $generator->getTableSchema()) !== false) {
+				foreach ($tableSchema->columns as $column) {
+					if ($column->phpType == 'string' && $column->size === 255 && 
+						preg_match('/^(document|document1|document2|photo|image|picture|file)$/i', $column->name)) {
+						?>					
+				$files[<?= $idx; ?>] = \yii\web\UploadedFile::getInstance($model, '<?= $column->name ?>');
+				$model-><?= $column->name ?>=isset($currentFiles[<?= $idx; ?>])?$currentFiles[<?= $idx; ?>]:'';
+				if(!empty($files[<?= $idx; ?>])){
+					$ext = end((explode(".", $files[<?= $idx; ?>]->name)));
+					$model-><?= $column->name ?> = uniqid() . '.' . $ext;
+					$path = '';
+					if(isset(Yii::$app->params['uploadPath'])){
+						$path = Yii::$app->params['uploadPath'].'/<?= strtolower($modelClass); ?>/'.$model->id.'/';
+					}
+					else{
+						$path = Yii::getAlias('@common').'/../files/<?= strtolower($modelClass); ?>/'.$model->id.'/';
+					}
+					@mkdir($path, 0777, true);
+					@chmod($path, 0777);
+					$paths[<?= $idx; ?>] = $path . $model-><?= $column->name ?>;
+					if(isset($currentFiles[<?= $idx; ?>])) @unlink($path . $currentFiles[<?= $idx; ?>]);
+				}
+						<?php
+						$idx++;
+					}
+				}
+			}
+            ?>
+
+            if($model->save()){
+				$idx=0;
+                foreach($files as $file){
+					if(isset($paths[$idx])){
+						$file->saveAs($paths[$idx]);
+					}
+					$idx++;
+				}
+                return $this->redirect(['view', <?= $urlParams ?>]);
+            } else {
+                // error in saving model
+            }            
+        }
+		else{
+			//return $this->render(['update', <?= $urlParams ?>]);
+			return $this->render('update', [
                 'model' => $model,
             ]);
-        }
+		}
     }
 
     /**
@@ -171,4 +237,31 @@ if (count($pks) === 1) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+	
+	public function actionEditable() {
+		$model = new <?= $modelClass ?>; // your model can be loaded here
+		// Check if there is an Editable ajax request
+		if (isset($_POST['hasEditable'])) {
+			// read your posted model attributes
+			if ($model->load($_POST)) {
+				// read or convert your posted information
+				$model2 = $this->findModel($_POST['editableKey']);
+				$name=key($_POST['<?= $modelClass ?>'][$_POST['editableIndex']]);
+				$value=$_POST['<?= $modelClass ?>'][$_POST['editableIndex']][$name];
+				$model2->$name = $value ;
+				$model2->save();
+				// return JSON encoded output in the below format
+				echo \yii\helpers\Json::encode(['output'=>$value, 'message'=>'']);
+				// alternatively you can return a validation error
+				// echo \yii\helpers\Json::encode(['output'=>'', 'message'=>'Validation error']);
+			}
+			// else if nothing to do always return an empty JSON encoded output
+			else {
+				echo \yii\helpers\Json::encode(['output'=>'', 'message'=>'']);
+			}
+		return;
+		}
+		// Else return to rendering a normal view
+		return $this->render('view', ['model'=>$model]);
+	}
 }

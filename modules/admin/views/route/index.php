@@ -7,9 +7,11 @@ use yii\helpers\Html;
  */
 $this->title = 'Routes';
 $this->params['breadcrumbs'][] = $this->title;
+$controller = $this->context;
+$menus = $controller->module->menus;
+$this->params['sideMenu']=$menus;
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/admin/views/layouts/column2.php'); ?>
-
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 <p>
     <?= Html::a('Create route', ['create'], ['class' => 'btn btn-success']) ?>
 </p>

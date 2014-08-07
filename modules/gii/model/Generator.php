@@ -90,5 +90,5 @@ class Generator extends \yii\gii\generators\model\Generator
 		}
 		
         return $this->_classNames[$tableName] = Inflector::id2camel($className, '_');
-    }
+    }	
 }

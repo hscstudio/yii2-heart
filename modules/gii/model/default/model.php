@@ -159,6 +159,16 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
         ];
     }
 <?php foreach ($relations as $name => $relation): ?>
+	<?php
+	$suffix_2=substr($name,0,2);
+	$suffix_3=substr($name,0,3);
+	if($suffix_3==='Tbl' or $suffix_3==='Ref'){
+		$name=substr($name,3,255);
+	}
+	else if($suffix_2==='Tb'){
+		$name=substr($name,2,255);
+	}
+	?>
     /**
      * @return \yii\db\ActiveQuery
      */

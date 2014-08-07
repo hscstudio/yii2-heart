@@ -20,6 +20,9 @@ $this->title = <?= $generator->generateString('Update {modelClass}: ', ['modelCl
 $this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>, 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model-><?= $generator->getNameAttribute() ?>, 'url' => ['view', <?= $urlParams ?>]];
 $this->params['breadcrumbs'][] = <?= $generator->generateString('Update') ?>;
+$controller = $this->context;
+$menus = $controller->module->getMenuItems();
+$this->params['sideMenu']=$menus;
 
 echo \kartik\widgets\AlertBlock::widget([
     'useSessionFlash' => true,
@@ -28,7 +31,7 @@ echo \kartik\widgets\AlertBlock::widget([
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
 
-    <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
+    <!-- <h1><?= "<?= " ?>Html::encode($this->title) ?></h1> -->
 
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

@@ -141,7 +141,9 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					'site/*',
 					'gii/*',
 					'privilege/*',
-					'user/*', // add or remove allowed actions to this list
+					'user/*', 
+					'gridview/*',
+					// add or remove allowed actions to this list
 			]);
 			$app->set('authManager', $authManager);
 	 
@@ -157,6 +159,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			//$app->getModule('privilege')->bootstrap($app);
 			
 			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';
+			$pathMap['@app/views/layouts'] = '@hscstudio/heart/views/layouts';
 		}
 		
 		if (!empty($pathMap)) {
@@ -175,5 +178,11 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			$assets = $view->assetManager->publish('@hscstudio/heart/assets/fontawesome');
 			$view->registerCssFile($assets[1].'/css/font-awesome.min.css');
 		}
+		
+		\yii\base\Event::on('yii\web\Controller','beforeAction',function($event){
+			if($event->sender->uniqueId=='site'){
+				$event->sender->layout = 'column1';
+			}
+		});
     }
 }

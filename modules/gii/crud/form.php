@@ -12,5 +12,9 @@ echo $form->field($generator, 'indexWidgetType')->dropDownList([
     'grid' => 'GridView',
     'list' => 'ListView',
 ]);
+echo $form->field($generator, 'layout')->dropDownList([
+    'column2' => 'Column2',
+    'column1' => 'Column1',
+]);
 echo $form->field($generator, 'enableI18N')->checkbox();
 echo $form->field($generator, 'messageCategory');

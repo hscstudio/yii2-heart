@@ -20,8 +20,11 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Create a user account');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('user', 'Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['sideMenu'] = [
+	['icon'=>'user','label' => Yii::t('user', 'Manage Users'), 'url' => ['/user/admin/index']]
+];
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 <div class="panel panel-default">
     <div class="panel-heading">
         <?= Html::encode($this->title) ?>

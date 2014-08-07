@@ -19,8 +19,14 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('user', 'Networks');
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['sideMenu'] = [
+		['label' => Yii::t('user', 'Profile'), 'url' => ['/user/settings/profile']],
+		['label' => Yii::t('user', 'Email'), 'url' => ['/user/settings/email']],
+		['label' => Yii::t('user', 'Password'), 'url' => ['/user/settings/password']],
+		['label' => Yii::t('user', 'Networks'), 'url' => ['/user/settings/networks']],
+	];
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/settings/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 
 <?php if (Yii::$app->getSession()->hasFlash('account_connected')): ?>
 	<div class="col-md-12">

@@ -19,8 +19,11 @@ use yii\grid\GridView;
  */
 $this->title = Yii::t('user', 'Manage users');
 $this->params['breadcrumbs'][] = $this->title;
+$this->params['sideMenu'] = [
+	['icon'=>'user','label' => 'Manage Users', 'url' => ['/user/admin/index']]
+];
 ?>
-<?php $this->beginContent('@hscstudio/heart/modules/user/views/admin/column2.php'); ?>
+<?php $this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); ?>
 <?= Html::a(Yii::t('user', 'Create a user account'), ['create'], ['class' => 'btn btn-success']) ?>
 <hr>
 <?php if (Yii::$app->getSession()->hasFlash('admin_user')): ?>
