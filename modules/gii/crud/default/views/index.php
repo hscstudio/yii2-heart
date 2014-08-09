@@ -155,27 +155,34 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 		'hover'=>true,
     ]); ?>
 	<?= "<?php " ?>	
-	// PHPExcel
-	echo Html::beginTag('div', ['class'=>'dropdown']);
-	echo Html::button('PHPExcel <span class="caret"></span></button>', 
-		['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
-	echo Dropdown::widget([
-		'items' => [
-			['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx&template=yes']],
-			['label' => 'EXport XLS', 'url' => ['php-excel?filetype=xls&template=yes']],
-			['label' => 'Export PDF', 'url' => ['php-excel?filetype=pdf&template=no']],
-		],
-	]); 
-	echo " " ;
-	echo Html::button('OpenTBS <span class="caret"></span></button>', 
-		['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
-	echo Dropdown::widget([
-		'items' => [
-			['label' => 'EXport DOCX', 'url' => ['open-tbs?filetype=docx']],
-			['label' => 'EXport ODT', 'url' => ['open-tbs?filetype=odt']],
-			['label' => 'EXport XLSX', 'url' => ['open-tbs?filetype=xlsx']],
-		],
-	]); 
+	echo Html::beginTag('div', ['class'=>'row']);
+		echo Html::beginTag('div', ['class'=>'col-md-2']);
+			echo Html::beginTag('div', ['class'=>'dropdown']);
+				echo Html::button('PHPExcel <span class="caret"></span></button>', 
+					['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
+				echo Dropdown::widget([
+					'items' => [
+						['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx&template=yes']],
+						['label' => 'EXport XLS', 'url' => ['php-excel?filetype=xls&template=yes']],
+						['label' => 'Export PDF', 'url' => ['php-excel?filetype=pdf&template=no']],
+					],
+				]); 
+			echo Html::endTag('div');
+		echo Html::endTag('div');
+	
+		echo Html::beginTag('div', ['class'=>'col-md-2']);
+			echo Html::beginTag('div', ['class'=>'dropdown']);
+				echo Html::button('OpenTBS <span class="caret"></span></button>', 
+					['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
+				echo Dropdown::widget([
+					'items' => [
+						['label' => 'EXport DOCX', 'url' => ['php-excel?filetype=docx']],
+						['label' => 'EXport ODT', 'url' => ['php-excel?filetype=odt']],
+						['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx']],
+					],
+				]); 
+			echo Html::endTag('div');
+		echo Html::endTag('div');	
 	echo Html::endTag('div');
 	?>
 <?php else: ?>
