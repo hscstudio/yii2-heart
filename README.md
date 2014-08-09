@@ -14,21 +14,21 @@ Done
 - Wrap Arshaw Calendar 
 - Use Kartik-v Extension
 - Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
-- Database Migration
-
 ```
 $objPHPExcel = new \PHPExcel();
 ```
-
-Progress..
-- Wrap adminLTE -> create widget content
-  (done Navbar, NavSide, Nav, Dropdown, Breadcrumbs, Box)
-- Create Gii Improved base on this extension
-
-Waiting
 - Wrap TCPDF or FPDF
 - Wrap TinyButStrong
+- Database Migration
+- Gii Improved base on above extension
+
+
+Progress..
 - Wrap Highchart
+- Bugfix
+
+Waiting
+- any idea?
 
 
 Installation
