@@ -28,7 +28,7 @@ $this->params['sideMenu']=$menus;
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-view">
 
     <!-- <h1><?= "<?= " ?>Html::encode($this->title) ?></h1> -->
-
+	<!--
     <p>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Update') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']) ?>
         <?= "<?= " ?>Html::a(<?= $generator->generateString('Delete') ?>, ['delete', <?= $urlParams ?>], [
@@ -39,9 +39,14 @@ $this->params['sideMenu']=$menus;
             ],
         ]) ?>
     </p>
-
+	-->
     <?= "<?= " ?>DetailView::widget([
         'model' => $model,
+		'mode'=>DetailView::MODE_VIEW,
+		'panel'=>[
+			'heading'=>'<?= Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?> # ' . $model->id,
+			'type'=>DetailView::TYPE_DEFAULT,
+		],
         'attributes' => [
 <?php
 if (($tableSchema = $generator->getTableSchema()) === false) {
@@ -51,6 +56,19 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 } else {
     foreach ($generator->getTableSchema()->columns as $column) {
         $format = $generator->generateColumnFormat($column);
+		$names = explode('_',$column->name);
+		if(count($names>0) and in_array($names[0],['tbl','tb','ref'])){
+			$new_name=substr($column->name,strlen($names[0]),strlen($column->name));
+			$new_name=substr($new_name,0,strlen($new_name)-3);
+			$new_name=\yii\helpers\Inflector::camelize($new_name);
+			$new_name=lcfirst($new_name);
+			echo "            [
+				'attribute' => '".$column->name."',
+				'value' => function (\$model) {
+					return \$model->".$new_name."->name;
+				}
+			],\n";
+		}
         echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
     }
 }

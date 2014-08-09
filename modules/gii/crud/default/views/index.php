@@ -14,6 +14,7 @@ echo "<?php\n";
 
 use yii\helpers\Html;
 use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
+use yii\bootstrap\Dropdown;
 
 /* @var $this yii\web\View */
 <?= !empty($generator->searchModelClass) ? "/* @var \$searchModel " . ltrim($generator->searchModelClass, '\\') . " */\n" : '' ?>
@@ -104,13 +105,21 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 					]
 				],\n";
 				}
+				else if($format==='boolean'){
+				echo "            
+				[
+					'class' => '\kartik\grid\BooleanColumn',
+					'trueLabel' => 'Yes', 
+					'falseLabel' => 'No'
+				],\n";
+				}
 				else */
 				if($format==='text'){
 				echo "            
 				[
 					'class' => 'kartik\grid\EditableColumn',
 					'attribute' => '".$column->name."',
-					'pageSummary' => 'Page Total',
+					//'pageSummary' => 'Page Total',
 					'vAlign'=>'middle',
 					'headerOptions'=>['class'=>'kv-sticky-column'],
 					'contentOptions'=>['class'=>'kv-sticky-column'],
@@ -145,6 +154,30 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 		'responsive'=>true,
 		'hover'=>true,
     ]); ?>
+	<?= "<?php " ?>	
+	// PHPExcel
+	echo Html::beginTag('div', ['class'=>'dropdown']);
+	echo Html::button('PHPExcel <span class="caret"></span></button>', 
+		['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
+	echo Dropdown::widget([
+		'items' => [
+			['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx&template=yes']],
+			['label' => 'EXport XLS', 'url' => ['php-excel?filetype=xls&template=yes']],
+			['label' => 'Export PDF', 'url' => ['php-excel?filetype=pdf&template=no']],
+		],
+	]); 
+	echo " " ;
+	echo Html::button('OpenTBS <span class="caret"></span></button>', 
+		['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
+	echo Dropdown::widget([
+		'items' => [
+			['label' => 'EXport DOCX', 'url' => ['php-excel?filetype=docx']],
+			['label' => 'EXport ODT', 'url' => ['php-excel?filetype=odt']],
+			['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx']],
+		],
+	]); 
+	echo Html::endTag('div');
+	?>
 <?php else: ?>
     <?= "<?= " ?>ListView::widget([
         'dataProvider' => $dataProvider,

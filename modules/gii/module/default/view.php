@@ -7,7 +7,7 @@
 $controller = $this->context;
 $menus = $controller->module->getMenuItems();
 $this->params['sideMenu']=$menus;
-$this->beginContent('@hscstudio/heart/views/layouts/column2module.php'); 
+<?php } ?>
 ?>
 <div class="<?= $generator->moduleID . '-default-index' ?>">
     <h1><?= "<?= " ?>$this->context->action->uniqueId ?></h1>
@@ -18,7 +18,7 @@ $this->beginContent('@hscstudio/heart/views/layouts/column2module.php');
     </p>
 	<p>
         You may customize side bar menu by editing folowing file:<br>
-		<?= "<?php " ?>$path = explode('views\default',__FILE__);  ?>
+		<?= "<?php " ?>$path = explode('views',__FILE__);  ?>
         <code><?= "<?= " ?>$path[0]; ?>Module.php</code>
     </p>
     <p>
@@ -26,4 +26,3 @@ $this->beginContent('@hscstudio/heart/views/layouts/column2module.php');
         <code><?= "<?= " ?>__FILE__ ?></code>
     </p>
 </div>
-<?= "<?php " ?>$this->endContent();

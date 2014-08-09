@@ -31,7 +31,7 @@ class <?= $className ?> extends \yii\base\Module
 		return [
 			['icon'=>'dashboard','label' => 'Dashboard', 'url' => ['/'.$this->uniqueId.'/default']],
 			// Add here your items module
-			//['label' => 'Employee', 'url' => ['/'.$this->uniqueId.'/employee']],
+			//['label' => 'Employee', 'url' => ['/'.$this->uniqueId.'/employee/index']],
 		];
 	}
 }

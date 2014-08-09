@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use kartik\widgets\SideNav;
 use hscstudio\heart\widgets\Breadcrumbs;
+use kartik\widgets\AlertBlock;
 /**
  * @var \yii\web\View $this
  * @var string $content
@@ -47,6 +48,12 @@ use hscstudio\heart\widgets\Breadcrumbs;
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <section class="content">
+			<?php 
+			echo AlertBlock::widget([
+				'useSessionFlash' => true,
+				'type' => AlertBlock::TYPE_ALERT
+			]); 
+			?>
             <?= $content ?>
         </section>
     </aside>
