@@ -176,9 +176,9 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 					['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
 				echo Dropdown::widget([
 					'items' => [
-						['label' => 'EXport DOCX', 'url' => ['php-excel?filetype=docx']],
-						['label' => 'EXport ODT', 'url' => ['php-excel?filetype=odt']],
-						['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx']],
+						['label' => 'EXport DOCX', 'url' => ['open-tbs?filetype=docx']],
+						['label' => 'EXport ODT', 'url' => ['open-tbs?filetype=odt']],
+						['label' => 'EXport XLSX', 'url' => ['open-tbs?filetype=xlsx']],
 					],
 				]); 
 			echo Html::endTag('div');
