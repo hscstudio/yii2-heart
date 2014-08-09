@@ -17,17 +17,19 @@ Done
 ```
 $objPHPExcel = new \PHPExcel();
 ```
-- Wrap TCPDF or FPDF
+- Wrap TCPDF (no wrap only use)
 - Wrap TinyButStrong
 - Database Migration
 - Gii Improved base on above extension
 
 
 Progress..
-- Wrap Highchart
+- Update manual
 - Bugfix
 
 Waiting
+- Wrap Highchart
+- Create Import Excel
 - any idea?
 
 
