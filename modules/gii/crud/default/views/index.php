@@ -81,6 +81,9 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 			else if($column->name=='id'){
 				echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
 			}
+			else if(in_array($column->name,['created','createdBy','modified','modifiedBy','deleted','deletedBy'])){
+				echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+			}
 			else{				
 				/*if($column->type=='date'){
 				echo "            
@@ -182,7 +185,24 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 					],
 				]); 
 			echo Html::endTag('div');
-		echo Html::endTag('div');	
+		echo Html::endTag('div');
+		
+		echo Html::beginTag('div', ['class'=>'col-md-8']);
+			$form = \yii\bootstrap\ActiveForm::begin([
+				'options'=>['enctype'=>'multipart/form-data'],
+				'action'=>['import'],
+			]);
+			echo \kartik\widgets\FileInput::widget([
+				'name' => 'importFile', 
+				//'options' => ['multiple' => true], 
+				'pluginOptions' => [
+					'previewFileType' => 'any',
+					'uploadLabel'=>"Import Excel",
+				]
+			]);
+			\yii\bootstrap\ActiveForm::end();
+		echo Html::endTag('div');
+		
 	echo Html::endTag('div');
 	?>
 <?php else: ?>

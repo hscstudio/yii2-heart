@@ -457,4 +457,104 @@ if(++$idx>3) break;
             'dataProvider' => $dataProvider,
         ]);	
     }
+	
+	public function actionImport(){
+		$dataProvider = new ActiveDataProvider([
+            'query' => <?= $modelClass; ?>::find(),
+        ]);
+		
+		/* 
+		Please read guide of upload https://github.com/yiisoft/yii2/blob/master/docs/guide/input-file-upload.md
+		maybe I do mistake :)
+		*/		
+		if (!empty($_FILES)) {
+			$importFile = \yii\web\UploadedFile::getInstanceByName('importFile');
+			if(!empty($importFile)){
+				$fileTypes = ['xls','xlsx']; // File extensions allowed
+				//$ext = end((explode(".", $importFile->name)));
+				$ext=$importFile->extension;
+				if(in_array($ext,$fileTypes)){
+					$inputFileType = \PHPExcel_IOFactory::identify($importFile->tempName );
+					$objReader = \PHPExcel_IOFactory::createReader($inputFileType);
+					$objPHPExcel = $objReader->load($importFile->tempName );
+					$sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
+					$baseRow = 2;
+					$inserted=0;
+					$read_status = false;
+					$err=[];
+					while(!empty($sheetData[$baseRow]['A'])){
+						$read_status = true;
+						$abjadX=array();
+						<?php
+						for($i=65;$i<=90;$i++){
+							$abjadX[]=chr($i);
+							if($i==90){
+								for($j=65;$j<=90;$j++){
+									for($k=65;$k<=90;$k++){
+										$abjadX[]=chr($j).chr($k);
+									}
+								}
+							}
+						}
+						$count=0;
+						foreach ($generator->getTableSchema()->columns as $column) {
+							if($count!=0) echo "\t\t\t\t\t\t";
+							if ($column->autoIncrement or in_array($column->name, ['created','createdBy','modified','modifiedBy','deleted','deletedBy'])) 
+								echo "//\$" . $column->name . "=  \$sheetData[\$baseRow]['".$abjadX[$count]."'];\n";	
+							else 
+								echo "\$" . $column->name . "=  \$sheetData[\$baseRow]['".$abjadX[$count]."'];\n";
+							$count++;
+						}
+						echo "\n";
+						?>
+						$model2=new <?= $modelClass; ?>;
+						<?php
+						$count=0;
+						foreach ($generator->getTableSchema()->columns as $column) {
+							if($count!=0) echo "\t\t\t\t\t\t";
+							if ($column->autoIncrement or in_array($column->name, ['created','createdBy','modified','modifiedBy','deleted','deletedBy'])) 
+								echo "//\$model2->" . $column->name . "=  \$".$column->name.";\n";
+							else 
+								echo "\$model2->" . $column->name . "=  \$".$column->name.";\n";
+							$count++;	
+						}
+						echo "\n";
+						?>
+						try{
+							if($model2->save()){
+								$inserted++;
+							}
+							else{
+								foreach ($model2->errors as $error){
+									$err[]=($baseRow-1).'. '.implode('|',$error);
+								}
+							}
+						}
+						catch (\yii\base\ErrorException $e){
+							Yii::$app->session->setFlash('error', "{$e->getMessage()}");
+							//$this->refresh();
+						} 
+						$baseRow++;
+					}	
+					Yii::$app->session->setFlash('success', ($inserted).' row inserted');
+					if(!empty($err)){
+						Yii::$app->session->setFlash('warning', 'There are error: <br>'.implode('<br>',$err));
+					}
+				}
+				else{
+					Yii::$app->session->setFlash('error', 'Filetype allowed only xls and xlsx');
+				}				
+			}
+			else{
+				Yii::$app->session->setFlash('error', 'File import empty!');
+			}
+		}
+		else{
+			Yii::$app->session->setFlash('error', 'File import empty!');
+		}
+		
+		return $this->render('index', [
+            'dataProvider' => $dataProvider,
+        ]);					
+	}
 }
