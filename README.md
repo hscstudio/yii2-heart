@@ -20,6 +20,7 @@ $objPHPExcel = new \PHPExcel();
 - Wrap TCPDF (no wrap only use)
 - Wrap TinyButStrong
 - Database Migration
+- Import Excel ready
 - Gii Improved base on above extension
 
 
@@ -29,7 +30,6 @@ Progress..
 
 Waiting
 - Wrap Highchart
-- Create Import Excel
 - any idea?
 
 
