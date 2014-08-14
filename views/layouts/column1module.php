@@ -1,6 +1,10 @@
 <?php
 use yii\helpers\Html;
 use hscstudio\heart\widgets\Breadcrumbs;
+use kartik\icons\Icon;
+ 
+// Set default icon fontawesome
+Icon::map($this, Icon::FA);
 /**
  * @var \yii\web\View $this
  * @var string $content

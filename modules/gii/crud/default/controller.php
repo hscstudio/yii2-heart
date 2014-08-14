@@ -110,7 +110,13 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     {
         $model = new <?= $modelClass ?>();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())){
+			if($model->save()) {
+				 Yii::$app->session->setFlash('success', 'Data saved');
+			}
+			else{
+				 Yii::$app->session->setFlash('error', 'Unable create there are some error');
+			}
             return $this->redirect(['view', <?= $urlParams ?>]);
         } else {
             return $this->render('create', [
@@ -165,8 +171,8 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
 					else{
 						$path = Yii::getAlias('@common').'/../files/<?= strtolower($modelClass); ?>/'.$model->id.'/';
 					}
-					@mkdir($path, 0777, true);
-					@chmod($path, 0777);
+					@mkdir($path, 0755, true);
+					@chmod($path, 0755);
 					$paths[<?= $idx; ?>] = $path . $model-><?= $column->name ?>;
 					if(isset($currentFiles[<?= $idx; ?>])) @unlink($path . $currentFiles[<?= $idx; ?>]);
 				}
@@ -185,9 +191,11 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
 					}
 					$idx++;
 				}
+				Yii::$app->session->setFlash('success', 'Data saved');
                 return $this->redirect(['view', <?= $urlParams ?>]);
             } else {
                 // error in saving model
+				Yii::$app->session->setFlash('error', 'There are some errors');
             }            
         }
 		else{

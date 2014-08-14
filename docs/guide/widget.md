@@ -31,7 +31,7 @@ NavBar::end();
 ### NavSide ###
 ---
 
-Sidebar menu adminLTE like.. :)
+Sidebar menu adminLTE like.. :) but not recommendate use this.. solution.. use kartik sidenav
 ```php
 <?php
 use hscstudio\heart\widgets\NavSide;
@@ -71,7 +71,9 @@ use hscstudio\heart\widgets\Breadcrumbs;
 ### Box ###
 ---
 @see http://almsaeedstudio.com/AdminLTE/pages/widgets.html
+Experimental
 ```
+use hscstudio\heart\widgets\Box;
 Box::begin([
 	'type'=>'small', // ,small, solid, tiles
 	'bgColor'=>'aqua', // , aqua, green, yellow, red, blue, purple, teal, maroon, navy, light-blue

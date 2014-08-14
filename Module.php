@@ -16,12 +16,12 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
      */
 	
 	public $features=[
-		'fontawesome'=>true, // use false for not use it
 		'datecontrol'=>true,// use false for not use it
 		'gridview'=>true,// use false for not use it
 		'gii'=>true, // use false for not use it
-		'privilege'=>[],// use false for not use it
-		'user'=>[]	// use false for not use it
+		'user'=>true,	// use false for not use it
+		'privilege'=>true,// use false for not use it
+		
 	];
 	
     public function init()
@@ -47,8 +47,9 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		
 		$view = $app->getView();
 		$pathMap=[];
-			
-		if(@$this->features['datecontrol']!=false){		
+		
+		if(!isset($this->features['datecontrol'])) $this->features['datecontrol']=true;		
+		if($this->features['datecontrol']!=false){		
 			$app->setModules([
 				'datecontrol' => [
 					'class' => '\kartik\datecontrol\Module',			 
@@ -78,7 +79,8 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			]);
 		}
 		
-		if(@$this->features['gridview']!=false){		
+		if(!isset($this->features['gridview'])) $this->features['gridview']=true;
+		if($this->features['gridview']!=false){		
 			$app->setModules([
 				'gridview' => [
 					'class' => '\kartik\grid\Module',
@@ -86,7 +88,8 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			]);
 		}
 		
-		if(@$this->features['gii']!=false){		
+		if(!isset($this->features['gii'])) $this->features['gii']=true;
+		if($this->features['gii']!=false){		
 			$app->setModules([
 				'gii' => [
 					'class' => 'yii\gii\Module',
@@ -115,24 +118,19 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			]);
 		}
 		
-		if(@$this->features['user']!=false){			
-			$app->setModule('user', 
-				yii\helpers\ArrayHelper::merge([ // bisa juga pake yii\helpers\ArrayHelper::merge
-					'class' => '\dektrium\user\Module',
-					'confirmable' => false,
-					'confirmWithin' => 86400,
-					'allowUnconfirmedLogin' => true,
-					'rememberFor' => 1209600,
-					'recoverWithin' => 21600,
-					'admins' => ['admin'],
-					'cost' => 13,
-				], $this->features['user'])
-			);
-			
-			$pathMap['@dektrium/user/views'] = '@hscstudio/heart/modules/user/views';
+		if(!isset($this->features['user'])) $this->features['user']=true;
+		if($this->features['user']!=false){			
+			if(isset($this->features['user']['pathMap'])){
+				foreach($this->features['user']['pathMap'] as $path1 => $path2){
+					$pathMap[$path1] = $path2;
+				}
+			}
+			else
+				$pathMap['@dektrium/user/views'] = '@hscstudio/heart/modules/user/views';
 		}
 		
-		if(@$this->features['privilege']!=false){		
+		if(!isset($this->features['privilege'])) $this->features['privilege']=true;
+		if($this->features['privilege']!=false){		
 			$authManager = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'authManager', [
 					'class' => 'yii\rbac\DbManager',
 			]);
@@ -172,12 +170,6 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		$assets = $view->assetManager->publish('@hscstudio/heart/assets/heart');
 		$view->registerCssFile($assets[1].'/css/heart.css', ['yii\bootstrap\BootstrapAsset']);
 		$view->registerJsFile($assets[1].'/js/heart.js', ['yii\web\JqueryAsset']);
-		
-		
-		if(@$this->features['fontawesome']!=false){
-			$assets = $view->assetManager->publish('@hscstudio/heart/assets/fontawesome');
-			$view->registerCssFile($assets[1].'/css/font-awesome.min.css');
-		}
 		
 		\yii\base\Event::on('yii\web\Controller','beforeAction',function($event){
 			if($event->sender->uniqueId=='site'){

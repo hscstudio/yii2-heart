@@ -74,8 +74,7 @@ return [
 		'heart' => [
 			'class' => 'hscstudio\heart\Module',
 			'features'=>[
-				// fontawesome, datecontrol (kartik), gridview (kartik), gii, 
-				'fontawesome'=>true, // use false for not use it
+				// datecontrol (kartik), gridview (kartik), gii, 
 				'datecontrol'=>true,// use false for not use it
 				'gridview'=>true,// use false for not use it
 				'gii'=>true, // use false for not use it

@@ -86,7 +86,7 @@ class Generator extends \yii\gii\generators\crud\Generator
 			//$new_name=lcfirst($new_name);
 			return "'' ?>\n
 			<?php
-			\$data = \yii\helpers\ArrayHelper::getColumn(\backend\models\\".$new_name."::find()->select('id,name')->all(), 'name');
+			\$data = ArrayHelper::map(\backend\models\\".$new_name."::find()->select(['id','name'])->asArray()->all(), 'id', 'name');
 			echo \$form->field(\$model, '$attribute')->widget(Select2::classname(), [
 				'data' => \$data,
 				'options' => ['placeholder' => 'Choose ".$new_name." ...'],
@@ -113,11 +113,9 @@ class Generator extends \yii\gii\generators\crud\Generator
 					]
 				])";
 			}
-			$dropDownOptions = ['0'=>'Option1','1'=>'Option2','2'=>'Option3'];		
-			if(!empty($dropDownOptions)){
-				return "\$form->field(\$model, '$attribute')->dropDownList("
-					. preg_replace("/\n\s*/", ' ', VarDumper::export($dropDownOptions)).", ['prompt' => 'Choose ".$column->name."'])";
-			}
+
+			$input = 'textInput';
+			return "\$form->field(\$model, '$attribute')->$input(['maxlength' => $column->size])";
 		}
 		
         if ($column->phpType === 'boolean') {

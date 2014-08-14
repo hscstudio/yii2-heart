@@ -3,9 +3,6 @@
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
-/* @var $this yii\web\View */
-/* @var $generator yii\gii\generators\crud\Generator */
-
 $urlParams = $generator->generateUrlParams();
 
 echo "<?php\n";
@@ -30,8 +27,6 @@ echo \kartik\widgets\AlertBlock::widget([
 ]);
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-update">
-
-    <!-- <h1><?= "<?= " ?>Html::encode($this->title) ?></h1> -->
 
     <?= "<?= " ?>$this->render('_form', [
         'model' => $model,

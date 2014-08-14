@@ -3,16 +3,12 @@
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
-/* @var $this yii\web\View */
-/* @var $generator yii\gii\generators\crud\Generator */
-
 $urlParams = $generator->generateUrlParams();
 
 echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
-//use yii\widgets\DetailView;
 use kartik\detail\DetailView;
 
 /* @var $this yii\web\View */
@@ -27,26 +23,20 @@ $this->params['sideMenu']=$menus;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-view">
 
-    <!-- <h1><?= "<?= " ?>Html::encode($this->title) ?></h1> -->
-	<!--
-    <p>
-        <?= "<?= " ?>Html::a(<?= $generator->generateString('Update') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']) ?>
-        <?= "<?= " ?>Html::a(<?= $generator->generateString('Delete') ?>, ['delete', <?= $urlParams ?>], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => <?= $generator->generateString('Are you sure you want to delete this item?') ?>,
-                'method' => 'post',
-            ],
-        ]) ?>
-    </p>
-	-->
     <?= "<?= " ?>DetailView::widget([
         'model' => $model,
 		'mode'=>DetailView::MODE_VIEW,
 		'panel'=>[
-			'heading'=>'<?= Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?> # ' . $model->id,
+			'heading'=>'<i class="fa fa-fw fa-globe"></i> '.'<?= Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?> # ' . $model->id,
 			'type'=>DetailView::TYPE_DEFAULT,
 		],
+		'buttons1'=> Html::a('<i class="fa fa-fw fa-arrow-left"></i>',['index'],
+						['class'=>'btn btn-xs btn-primary',
+						 'title'=>'Back to Index',
+						]).' '.
+					 Html::a('<i class="fa fa-fw fa-trash-o"></i>',['#'],
+						['class'=>'btn btn-xs btn-danger kv-btn-delete',
+						 'title'=>'Delete', 'data-method'=>'post', 'data-confirm'=>'Are you sure you want to delete this item?']),
         'attributes' => [
 <?php
 if (($tableSchema = $generator->getTableSchema()) === false) {
@@ -64,9 +54,7 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 			$new_name=lcfirst($new_name);
 			echo "            [
 				'attribute' => '".$column->name."',
-				'value' => function (\$model) {
-					return \$model->".$new_name."->name;
-				}
+				'value' => \$model->".$new_name."->name,
 			],\n";
 		}
         echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";

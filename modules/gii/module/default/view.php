@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 /* @var $generator yii\gii\generators\module\Generator */
 ?>
+
 <?= "<?php " ?>
 <?php if(!empty($_POST['Generator']['moduleID'])){ ?>
 $controller = $this->context;
