@@ -1,39 +1,21 @@
 ## Layout ##
-in @app\views\layouts\main.php
-please use class css container-fluid not container
 
-for make 2 column layouts, You should create a file column2.php, this use adminLTE style.
+Yii2-heart have automatic handle Your layout and support 2 column, column1 and column2.
+You can check this layouts code in hscstudio\heart\views\layouts
+
+If You generate model with 2 column, You can add sidebar menu
 ```php
-<?php
-use yii\helpers\Html;
-use hscstudio\heart\widgets\Breadcrumbs;
-?>
-<?php $this->beginContent('@app/views/layouts/main.php'); ?>
-<div class="wrapper row-offcanvas row-offcanvas-left">
-    <aside class="left-side sidebar-offcanvas">                
-        <section class="sidebar">
-			<!-- Add menu or navigation here -->
-        </section>
-    </aside>
-
-    <aside class="right-side">   
-        <section class="content-header">
-            <h1><?= Html::encode($this->title) ?></h1>
-        </section>
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <!-- Main content -->
-        <section class="content">
-            <?= $content ?>
-        </section>
-    </aside>
-</div>
-<?php $this->endContent();
-
+/* menu should return this
+[
+	['icon'=>'fa fa-fw fa-dashboard','label' => 'Employee', 'url' => ['employee/index'], path=>'employee'],
+];
 ```
 
-And then in controller that use variabel layout and set it to be column2
+If You not use module, You should write menu in Your params config
 ```php
-public $layout="column2";
+$this->params['sideMenu']['heart-global']=[
+	['icon'=>'fa fa-fw fa-dashboard','label' => 'Employee', 'url' => ['employee/index'], path=>'employee'],
+]
 ```
+
+But if You use module You should edit file Module.php in Your module

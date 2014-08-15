@@ -45,13 +45,19 @@ use yii\filters\VerbFilter;
  */
 class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->baseControllerClass) . "\n" ?>
 {
-
+<?php if(!empty($_POST['Generator']['moduleID'])){ ?>
 	<?php if($_POST['Generator']['layout']=='column2'){ ?>
 	public $layout = '@hscstudio/heart/views/layouts/column2';
 	<?php } else { ?>
 	public $layout = '@hscstudio/heart/views/layouts/column1';
 	<?php } ?> 
-	
+<?php } else{ ?>
+	<?php if($_POST['Generator']['layout']=='column2'){ ?>
+	public $layout = 'column2';
+	<?php } else { ?>
+	public $layout = 'column1';
+	<?php } ?>
+<?php } ?> 	
 	public function behaviors()
     {
         return [

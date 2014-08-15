@@ -18,7 +18,23 @@ Icon::map($this, Icon::FA);
         <section class="sidebar">
 			<?php
 			$controller = $this->context;
-			$menus = isset($this->params['sideMenu']) ? $this->params['sideMenu'] : [];
+			$menus = [];
+			if(isset($this->params['sideMenu'][$controller->module->uniqueId])){
+				$menus = $this->params['sideMenu'][$controller->module->uniqueId];
+			}
+			else if(isset($this->params['sideMenu']['heart-global'])){
+				$menus = $this->params['sideMenu']['heart-global'];
+			}
+			/* menu should return this
+			[
+				['icon'=>'fa fa-fw fa-dashboard','label' => 'Employee', 'url' => ['employee/index'], path=>'employee'],
+			];
+			
+			If You not use module, You should write menu in Your params config
+			$this->params['sideMenu']['heart-global']=[
+				['icon'=>'fa fa-fw fa-dashboard','label' => 'Employee', 'url' => ['employee/index'], path=>'employee'],
+			]
+			*/
 			$route = $controller->route;
 			$items = [];
 			foreach ($menus as $menu) {
@@ -47,11 +63,10 @@ Icon::map($this, Icon::FA);
 				
 				$items[] = ['label'=>$menu['label'],'icon'=>$icon,'url'=>$menu['url'],'options'=>['class'=>$active],'items'=>$items2];
 			}
-			$this->params['sideMenu']=$items;
 			echo SideNav::widget([
 				//'type' => SideNav::TYPE_PRIMARY,
 				//'heading' => 'Options',
-				'items' => isset($this->params['sideMenu']) ? $this->params['sideMenu'] :  [
+				'items' => !empty($items) ? $items :  [
 					[
 						'url' => yii\helpers\Url::home(),
 						'label' => 'Home',

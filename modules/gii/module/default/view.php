@@ -7,7 +7,7 @@
 <?php if(!empty($_POST['Generator']['moduleID'])){ ?>
 $controller = $this->context;
 $menus = $controller->module->getMenuItems();
-$this->params['sideMenu']=$menus;
+$this->params['sideMenu'][$controller->module->uniqueId]=$menus;
 <?php } ?>
 ?>
 <div class="<?= $generator->moduleID . '-default-index' ?>">
