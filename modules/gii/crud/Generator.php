@@ -155,7 +155,7 @@ class Generator extends \yii\gii\generators\crud\Generator
         } else {			
 			if (preg_match('/^(email|mail)$/i', $column->name)) {
 				return "\$form->field(\$model, '$attribute', [
-					 'inputTemplate' => '<div class=\"input-group\"><span class=\"input-group-addon\">@</span>{input}</div>',
+					 'addon' => ['prepend' => ['content'=>'@']]
 				 ]);";
 			}
 			
