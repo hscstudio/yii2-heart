@@ -10,7 +10,6 @@ Roadmap
 ------------
 Done
 - Wrap Yii2-user (https://github.com/dektrium/yii2-user)
-- Wrap Yii2-admin (https://github.com/mdmsoft/yii2-admin)
 - Wrap Arshaw Calendar 
 - Use Kartik-v Extension
 - Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
@@ -22,14 +21,13 @@ $objPHPExcel = new \PHPExcel();
 - Database Migration
 - Import Excel ready
 - Gii Improved base on above extension
-
+- Highchart ready
 
 Progress..
 - Update manual
 - Bugfix
 
 Waiting
-- Wrap Highchart
 - any idea?
 
 

@@ -19,7 +19,6 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		'datecontrol'=>true,// use false for not use it
 		'gridview'=>true,// use false for not use it
 		'gii'=>true, // use false for not use it
-		'user'=>true,	// use false for not use it
 		'privilege'=>true,// use false for not use it
 		
 	];
@@ -56,25 +55,15 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					// format settings for displaying each date attribute
 					'displaySettings' => [
 						\kartik\datecontrol\Module::FORMAT_DATE => 'd-M-Y',
-						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s A',
-						\kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s A',
+						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
+						\kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s',
 					],			 
 					// format settings for saving each date attribute
 					'saveSettings' => [
 						\kartik\datecontrol\Module::FORMAT_DATE => 'Y-m-d', // U if saves as unix timestamp
 						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
 						\kartik\datecontrol\Module::FORMAT_DATETIME => 'Y-m-d H:i:s',
-					],			 
-					// automatically use kartik\widgets for each of the above formats
-					'autoWidget' => true,			 
-					// default settings for each widget from kartik\widgets used when autoWidget is true
-					'autoWidgetSettings' => [
-						\kartik\datecontrol\Module::FORMAT_DATE => [
-							'type'=>2, 'pluginOptions'=>['autoClose'=>true]
-						],
-						\kartik\datecontrol\Module::FORMAT_DATETIME => [], // setup if needed
-						\kartik\datecontrol\Module::FORMAT_TIME => [], // setup if needed
-					],
+					],					
 				]
 			]);
 		}
@@ -118,17 +107,6 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			]);
 		}
 		
-		if(!isset($this->features['user'])) $this->features['user']=true;
-		if($this->features['user']!=false){			
-			if(isset($this->features['user']['pathMap'])){
-				foreach($this->features['user']['pathMap'] as $path1 => $path2){
-					$pathMap[$path1] = $path2;
-				}
-			}
-			else
-				$pathMap['@dektrium/user/views'] = '@hscstudio/heart/modules/user/views';
-		}
-		
 		if(!isset($this->features['privilege'])) $this->features['privilege']=true;
 		if($this->features['privilege']!=false){		
 			$authManager = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'authManager', [
@@ -138,8 +116,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					'debug/*',
 					'site/*',
 					'gii/*',
-					'privilege/*',
-					'user/*', 
+					'privilege/*', 
 					'gridview/*',
 					// add or remove allowed actions to this list
 			]);
@@ -169,8 +146,35 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		
 		$assets = $view->assetManager->publish('@hscstudio/heart/assets/heart');
 		$view->registerCssFile($assets[1].'/css/heart.css', ['yii\bootstrap\BootstrapAsset']);
-		$view->registerJsFile($assets[1].'/js/heart.js', ['yii\web\JqueryAsset']);
+		$view->registerCssFile($assets[1].'/css/metroui.css', ['yii\bootstrap\BootstrapAsset']);
+		$view->registerJsFile($assets[1].'/js/heart.js', ['yii\web\BootstrapPluginAsset']);
+		$css = '
+		.overlay, .loading-img {
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+		}
 		
+		.overlay {
+		  z-index: 1010;
+		  background: rgba(255, 255, 255, 0.7);
+		}
+		
+		.overlay.dark {
+		  background: rgba(0, 0, 0, 0.5);
+		}
+		
+		.loading-img {
+		  z-index: 1020;
+		  background: transparent url("'.$assets[1].'/img/ajax-loader1.gif") 50% 20% no-repeat;
+		}
+		';
+		$view->registerCss($css);
+		
+		$view->registerJsFile($assets[1].'/js/bootstrap-growl.min.js', ['yii\web\BootstrapPluginAsset']);
+
 		\yii\base\Event::on('yii\web\Controller','beforeAction',function($event){
 			if($event->sender->uniqueId=='site'){
 				$event->sender->layout = 'column1';

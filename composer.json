@@ -12,15 +12,13 @@
 	],
 	"require": {
 		"yiisoft/yii2-jui": "*",
-		"dektrium/yii2-user": "*",
 		"mdmsoft/yii2-admin": "*",
 		"kartik-v/yii2-datecontrol": "dev-master",
 		"kartik-v/yii2-grid": "dev-master",
 		"kartik-v/yii2-detail-view": "dev-master",
 		"kartik-v/yii2-builder": "dev-master",
 		"kartik-v/yii2-icons": "dev-master",
-		"phpoffice/phpexcel": "dev-master",
-		"phpoffice/phpword": "dev-master"
+		"phpoffice/phpexcel": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {

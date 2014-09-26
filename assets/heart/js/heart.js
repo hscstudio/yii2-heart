@@ -13,7 +13,11 @@ var left_side_width = 220; //Sidebar width in pixels
 
 $(function() {
     "use strict";
-
+	
+	$(function () { 
+		$("[data-toggle='tooltip']").tooltip(); 
+	});
+	
     //Enable sidebar toggle
     $("[data-toggle='offcanvas']").click(function(e) {
         e.preventDefault();

@@ -1040,3 +1040,63 @@ color: #f6f6f6;
 .breadcrumb{
 	margin-bottom:0 !important;
 }
+
+.nav-pills > li.active > .nav-pills > li.active > a, 
+.nav-pills > li.active > .nav-pills > li.active > a:hover, 
+.nav-pills > li.active > .nav-pills > li.active > a:focus {
+	color: #fff;
+	background-color: rgb(86, 159, 222);
+}
+
+.rotate {
+	/* Safari */
+	-webkit-transform: rotate(-90deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-90deg);
+
+	/* IE */
+	-ms-transform: rotate(-90deg);
+
+	/* Opera */
+	-o-transform: rotate(-90deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+.left-side {	
+	box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.25);
+}
+.left-side > .sidebar > div{
+	/*margin-top:45px;*/
+	border-top:2px solid orange;
+}
+
+.nav-pills > li > a {
+	border-radius: 0 !important;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	color: #fff;
+	background-color: rgb(86, 159, 222);
+}
+
+.nav-pills > li.active > .nav-pills > li.active > a, .nav-pills > li.active > .nav-pills > li.active > a:hover, .nav-pills > li.active > .nav-pills > li.active > a:focus {
+	color: #fff;
+	background-color: rgb(116, 189, 252);
+	
+}
+
+.metro > ul.nav-pills > li:first-child > a {
+	border-radius: 5px 0 0 0 !important;
+}
+
+.metro > ul.nav-pills > li > a {
+	border-left: 1px solid #ddd;
+}
+
+.metro > ul.nav-pills > li.active > ul.nav-pills > li > a {
+	border-left: 1px solid #eee;
+}

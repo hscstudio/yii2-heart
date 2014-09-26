@@ -6,7 +6,6 @@
 <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
 <script src='../lib/moment.min.js'></script>
 <script src='../lib/jquery.min.js'></script>
-<script src='../lib/jquery-ui.custom.min.js'></script>
 <script src='../fullcalendar.min.js'></script>
 <script>
 
@@ -18,8 +17,9 @@
 				center: 'title',
 				right: 'month,agendaWeek,agendaDay'
 			},
-			defaultDate: '2014-06-12',
+			defaultDate: '2014-09-12',
 			editable: true,
+			eventLimit: true, // allow "more" link when too many events
 			events: {
 				url: 'php/get-events.php',
 				error: function() {
@@ -63,8 +63,9 @@
 	}
 
 	#calendar {
-		width: 900px;
+		max-width: 900px;
 		margin: 40px auto;
+		padding: 0 10px;
 	}
 
 </style>
