@@ -18,7 +18,8 @@
 		"kartik-v/yii2-detail-view": "dev-master",
 		"kartik-v/yii2-builder": "dev-master",
 		"kartik-v/yii2-icons": "dev-master",
-		"phpoffice/phpexcel": "dev-master"
+		"phpoffice/phpexcel": "dev-master",
+		"miloschuman/yii2-highcharts-widget": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
