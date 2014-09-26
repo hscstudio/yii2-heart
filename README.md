@@ -6,26 +6,19 @@ Yii2-heart is extension for Yii Framework version 2.0. It is set of extension (w
 Warning : This extension under development or PUBLIC PREVIEW :)
 
 
-Roadmap
+Feature
 ------------
-Done
-- Wrap Yii2-user (https://github.com/dektrium/yii2-user)
-- Wrap Arshaw Calendar 
-- Use Kartik-v Extension
-- Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
-```
-$objPHPExcel = new \PHPExcel();
-```
-- Wrap TCPDF (no wrap only use)
-- Wrap TinyButStrong
-- Database Migration
-- Import Excel ready
-- Gii Improved base on above extension
-- Highchart ready
+- RBAC ready via Yii2-admin (https://github.com/mdmsoft/yii2-admin)
+- Calendar Event via Arshaw Calendar 
+- Various UI Widget via Kartik-v Extension
+- Export to various file format via: PHPExcel, TCPDF, TinyButStrong
+- Import Excel ready via PHPExcel
+- Charting ready via Highchart
 
 Progress..
-- Update manual
-- Bugfix
+- Update manual & guide
+- Database Migration 
+- Gii Improved base on above extension
 
 Waiting
 - any idea?
@@ -76,7 +69,7 @@ return [
 				'datecontrol'=>true,// use false for not use it
 				'gridview'=>true,// use false for not use it
 				'gii'=>true, // use false for not use it
-				// privilege (yii2-admin), user (yii2-user) please read guide
+				// privilege (yii2-admin)
 			],
 		],
 		...
