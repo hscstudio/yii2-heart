@@ -3,6 +3,9 @@
 use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
+/* @var $this yii\web\View */
+/* @var $generator yii\gii\generators\crud\Generator */
+
 $urlParams = $generator->generateUrlParams();
 $nameAttribute = $generator->getNameAttribute();
 
@@ -10,25 +13,50 @@ echo "<?php\n";
 ?>
 
 use yii\helpers\Html;
-use <?= $generator->indexWidgetType === 'grid' ? "kartik\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
-use yii\bootstrap\Dropdown;
+use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?> as Gridview2;
+<?php
+/* modify by yii2-heart */
+?>
+use kartik\grid\GridView;
+use yii\helpers\Url;
+<?php
+/* modify by yii2-heart */
+?>
 
+/* @var $this yii\web\View */
 <?= !empty($generator->searchModelClass) ? "/* @var \$searchModel " . ltrim($generator->searchModelClass, '\\') . " */\n" : '' ?>
+/* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
-$this->params['breadcrumbs'][] = $this->title;
-
-<?php if(!empty($_POST['Generator']['moduleID'])){ ?>
+<?php
+/* modify by yii2-heart */
+?>
 $controller = $this->context;
 $menus = $controller->module->getMenuItems();
 $this->params['sideMenu'][$controller->module->uniqueId]=$menus;
-<?php } ?>
+<?php
+/* modify by yii2-heart */
+?>
+$this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-index">
-
+	
+<?php
+/* modify by yii2-heart */
+?>
+<!--
+    <h1><?= "<?= " ?>Html::encode($this->title) ?></h1>
 <?php if(!empty($generator->searchModelClass)): ?>
 <?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
 <?php endif; ?>
+
+    <p>
+        <?= "<?= " ?>Html::a(<?= $generator->generateString('Create {modelClass}', ['modelClass' => Inflector::camel2words(StringHelper::basename($generator->modelClass))]) ?>, ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+-->
+<?php
+/* modify by yii2-heart */
+?>
 
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
@@ -40,17 +68,17 @@ $this->params['sideMenu'][$controller->module->uniqueId]=$menus;
 $count = 0;
 if (($tableSchema = $generator->getTableSchema()) === false) {
     foreach ($generator->getColumnNames() as $name) {
-        if (++$count < 6) {
-            echo "            '" . $name . "',\n";
+		if (++$count < 6) {			
+			echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";            
         } else {
             echo "            // '" . $name . "',\n";
         }
     }
 } else {
-	$count=0;
     foreach ($tableSchema->columns as $column) {
         $format = $generator->generateColumnFormat($column);
-		if ($count < 6) {
+		if (++$count < 6) {   
+			$pos = strpos($column->name,'password');
 			/* 
 			 * Remove Prefix Tabel 
 			 * tbl_ ref_ tb_		 
@@ -70,32 +98,36 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
 				],
 				*/\n";
 			}
+			else if($pos!==false){
+				echo "            // '" . $column->name . "',\n";
+				$count = $count-1;
+			}
 			else if($column->name=='id'){
 				echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+				$count = $count-1;
 			}
-			else if(in_array($column->name,['created','createdBy','modified','modifiedBy','deleted','deletedBy'])){
+			else if(in_array($column->name,['created','created_by','modified','modified_by'])){
 				echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+				$count = $count-1;
 			}
 			else{				
-
 				if($format==='text'){
 				echo "            
 				[
-					'class' => 'kartik\grid\EditableColumn',
 					'attribute' => '".$column->name."',
-					//'pageSummary' => 'Page Total',
 					'vAlign'=>'middle',
+					'hAlign'=>'center',
 					'headerOptions'=>['class'=>'kv-sticky-column'],
-					'contentOptions'=>['class'=>'kv-sticky-column'],
-					'editableOptions'=>['header'=>'".ucfirst($column->name)."', 'size'=>'md','formOptions'=>['action'=>\yii\helpers\Url::to('editable')]]
+					'contentOptions'=>['class'=>'kv-sticky-column'],					
 				],\n";
 				}
 				else{
 				echo "            '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
 				}
-				$count++;
-			}				
-		}
+			}
+        } else {
+            echo "            // '" . $column->name . ($format === 'text' ? "" : ":" . $format) . "',\n";
+        }
     }
 }
 ?>
@@ -103,67 +135,17 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
             ['class' => 'kartik\grid\ActionColumn'],
         ],
 		'panel' => [
-			//'heading'=>'<h3 class="panel-title"><i class="fa fa-fw fa-globe"></i> <?= Inflector::camel2words(StringHelper::basename($generator->modelClass)); ?></h3>',
-			'heading'=>'<h3 class="panel-title"><i class="fa fa-fw fa-globe"></i></h3>',
-			//'type'=>'primary',
-			'before'=>Html::a('<i class="fa fa-fw fa-plus"></i> Create <?= Inflector::camel2words(StringHelper::basename($generator->modelClass)); ?>', ['create'], ['class' => 'btn btn-success']),
-			'after'=>Html::a('<i class="fa fa-fw fa-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
+			'heading'=>'<h3 class="panel-title"><i class="fa fa-fw fa-globe"></i> '.Html::encode($this->title).'</h3>',
+			'before'=>Html::a('<i class="fa fa-fw fa-plus"></i> Create ', ['create'], ['class' => 'btn btn-success']),
+			'after'=>Html::a('<i class="fa fa-fw fa-repeat"></i> Reset Grid', Url::to(''), ['class' => 'btn btn-info']),
 			'showFooter'=>false
 		],
 		'responsive'=>true,
 		'hover'=>true,
     ]); ?>
-	<?= "<?php " ?>	
-	echo Html::beginTag('div', ['class'=>'row']);
-		echo Html::beginTag('div', ['class'=>'col-md-2']);
-			echo Html::beginTag('div', ['class'=>'dropdown']);
-				echo Html::button('PHPExcel <span class="caret"></span></button>', 
-					['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
-				echo Dropdown::widget([
-					'items' => [
-						['label' => 'EXport XLSX', 'url' => ['php-excel?filetype=xlsx&template=yes']],
-						['label' => 'EXport XLS', 'url' => ['php-excel?filetype=xls&template=yes']],
-						['label' => 'Export PDF', 'url' => ['php-excel?filetype=pdf&template=no']],
-					],
-				]); 
-			echo Html::endTag('div');
-		echo Html::endTag('div');
-	
-		echo Html::beginTag('div', ['class'=>'col-md-2']);
-			echo Html::beginTag('div', ['class'=>'dropdown']);
-				echo Html::button('OpenTBS <span class="caret"></span></button>', 
-					['type'=>'button', 'class'=>'btn btn-default', 'data-toggle'=>'dropdown']);
-				echo Dropdown::widget([
-					'items' => [
-						['label' => 'EXport DOCX', 'url' => ['open-tbs?filetype=docx']],
-						['label' => 'EXport ODT', 'url' => ['open-tbs?filetype=odt']],
-						['label' => 'EXport XLSX', 'url' => ['open-tbs?filetype=xlsx']],
-					],
-				]); 
-			echo Html::endTag('div');
-		echo Html::endTag('div');
-		
-		echo Html::beginTag('div', ['class'=>'col-md-8']);
-			$form = \yii\bootstrap\ActiveForm::begin([
-				'options'=>['enctype'=>'multipart/form-data'],
-				'action'=>['import'],
-			]);
-			echo \kartik\widgets\FileInput::widget([
-				'name' => 'importFile', 
-				//'options' => ['multiple' => true], 
-				'pluginOptions' => [
-					'previewFileType' => 'any',
-					'uploadLabel'=>"Import Excel",
-				]
-			]);
-			\yii\bootstrap\ActiveForm::end();
-		echo Html::endTag('div');
-		
-	echo Html::endTag('div');
-	?>
 <?php else: ?>
     <?= "<?= " ?>ListView::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $dataProvider
         'itemOptions' => ['class' => 'item'],
         'itemView' => function ($model, $key, $index, $widget) {
             return Html::a(Html::encode($model-><?= $nameAttribute ?>), ['view', <?= $urlParams ?>]);

@@ -2,6 +2,8 @@
 namespace hscstudio\heart;
 
 use Yii;
+use yii\bootstrap\BootstrapAsset;
+use yii\bootstrap\BootstrapPluginAsset;
 
 /**
  * Description of Module
@@ -78,7 +80,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		}
 		
 		if(!isset($this->features['gii'])) $this->features['gii']=true;
-		if($this->features['gii']!=false){		
+		if($this->features['gii']!=false){	
 			$app->setModules([
 				'gii' => [
 					'class' => 'yii\gii\Module',
@@ -86,10 +88,12 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					'generators' => [
 						'crud' => [
 							'class' => 'hscstudio\heart\modules\gii\crud\Generator',
+							//'class' => 'yii\gii\generators\crud\Generator', //class generator
 							'templates' => [
 								'my' => '@hscstudio/heart/modules/gii/crud/default',
 							]
 						],
+						/*
 						'model' => [
 							'class' => 'hscstudio\heart\modules\gii\model\Generator',
 							'templates' => [
@@ -102,6 +106,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 								'my' => '@hscstudio/heart/modules/gii/module/default',
 							]
 						],
+						*/
 					],
 				]
 			]);
@@ -133,9 +138,10 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			
 			//$app->getModule('privilege')->bootstrap($app);
 			
-			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';
-			$pathMap['@app/views/layouts'] = '@hscstudio/heart/views/layouts';
+			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';			
 		}
+		
+		$pathMap['@app/views/layouts'] = '@hscstudio/heart/views/layouts';
 		
 		if (!empty($pathMap)) {
 			$view->theme = Yii::createObject([
@@ -145,9 +151,17 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		}
 		
 		$assets = $view->assetManager->publish('@hscstudio/heart/assets/heart');
-		$view->registerCssFile($assets[1].'/css/heart.css', ['yii\bootstrap\BootstrapAsset']);
-		$view->registerCssFile($assets[1].'/css/metroui.css', ['yii\bootstrap\BootstrapAsset']);
-		$view->registerJsFile($assets[1].'/js/heart.js', ['yii\web\BootstrapPluginAsset']);
+		$view->registerCssFile($assets[1].'/css/heart.css', [
+			'depends' => [BootstrapAsset::className()],
+		],'css-heart');
+		
+		$view->registerCssFile($assets[1].'/css/metroui.css', [
+			'depends' => [BootstrapAsset::className()],
+		], 'css-metroui');
+		
+		$view->registerJsFile($assets[1].'/js/heart.js', [
+			'depends' => [BootstrapPluginAsset::className()]
+		]);
 		$css = '
 		.overlay, .loading-img {
 			  position: fixed;
@@ -170,15 +184,23 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		  z-index: 1020;
 		  background: transparent url("'.$assets[1].'/img/ajax-loader1.gif") 50% 20% no-repeat;
 		}
+		
+		.bootstrap-switch {
+			min-width:125px !important;
+		}
 		';
 		$view->registerCss($css);
 		
-		$view->registerJsFile($assets[1].'/js/bootstrap-growl.min.js', ['yii\web\BootstrapPluginAsset']);
-
+		$view->registerJsFile($assets[1].'/js/bootstrap-growl.min.js', [
+			'depends' => [BootstrapPluginAsset::className()]
+		]);
+		
 		\yii\base\Event::on('yii\web\Controller','beforeAction',function($event){
 			if($event->sender->uniqueId=='site'){
 				$event->sender->layout = 'column1';
 			}
 		});
+		
+		
     }
 }

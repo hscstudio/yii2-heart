@@ -23,7 +23,13 @@ class <?= $className ?> extends \yii\base\Module
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
     }
+	
+	public function getMenuItems(){
+		return [
+			['icon'=>'fa fa-fw fa-dashboard','label' => 'Dashboard', 'url' => ['/'.$this->uniqueId.'/default']],
+			// Add here your items module
+			//['icon'=>'fa fa-fw fa-dashboard', 'label' => 'Employee', 'url' => ['/'.$this->uniqueId.'/employee/index']],
+		];
+	}
 }

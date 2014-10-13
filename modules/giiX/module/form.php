@@ -8,5 +8,9 @@
 <?php
     echo $form->field($generator, 'moduleClass');
     echo $form->field($generator, 'moduleID');
+	echo $form->field($generator, 'layout')->dropDownList([
+		'column2' => 'Column2',
+		'column1' => 'Column1',
+	]);
 ?>
 </div>

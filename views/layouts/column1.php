@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use hscstudio\heart\widgets\Breadcrumbs;
 use kartik\icons\Icon;
- 
+use kartik\widgets\AlertBlock; 
 // Set default icon fontawesome
 Icon::map($this, Icon::FA);
 /**
@@ -20,6 +20,12 @@ Icon::map($this, Icon::FA);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <section class="content">
+			<?php 
+			echo AlertBlock::widget([
+				'useSessionFlash' => true,
+				'type' => AlertBlock::TYPE_ALERT
+			]); 
+			?>
             <?= $content ?>
         </section>
     </aside>

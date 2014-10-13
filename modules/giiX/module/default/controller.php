@@ -15,7 +15,13 @@ use yii\web\Controller;
 
 class DefaultController extends Controller
 {
-    public function actionIndex()
+	<?php if($_POST['Generator']['layout']=='column2'){ ?>
+	public $layout = '@hscstudio/heart/views/layouts/column2';
+	<?php } else { ?>
+	public $layout = '@hscstudio/heart/views/layouts/column1';
+	<?php } ?> 
+	
+	public function actionIndex()
     {
         return $this->render('index');
     }

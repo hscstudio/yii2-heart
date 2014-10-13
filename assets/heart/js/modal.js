@@ -2,6 +2,17 @@ $('.modal-heart, .modal-refresh').on('click', function () {
 	var $modal = $('#modal-heart');
 	var $link = $(this);
 	var $source = $link.attr('source')
+	var $size = $link.attr('modal-size')
+	if($size=='modal-lg'){
+		$modal.find('.modal-dialog').removeClass( "modal-lg modal-md modal-sm" ).addClass( "modal-lg" );
+	}
+	else if($size=='modal-sm'){
+		$modal.find('.modal-dialog').removeClass( "modal-lg modal-md modal-sm" ).addClass( "modal-sm" );
+	}
+	else{
+		$modal.find('.modal-dialog').removeClass( "modal-lg modal-md modal-sm" );
+	}
+	
     $modal.find('.modal-refresh').attr('href', $link.attr('href'));
     if ($link.attr('title')) {
 		$modal.find('.modal-title').text($link.attr('title'));

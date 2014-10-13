@@ -9,7 +9,11 @@
 namespace hscstudio\heart\helpers;
 
 use Yii;
-
+use backend\models\ObjectReference;
+use backend\models\ObjectFile;
+use backend\models\File;
+use backend\models\ObjectPerson;
+use yii\helpers\ArrayHelper;
 /**
  * Provides implementation for various helper functions
  *
@@ -162,6 +166,131 @@ class Heart
 					return $day1.$delimiter.$month1.$delimiter.$year1;
 				}
 			}
+		}
+	}
+	
+	public function upload($instance_file, $object='person', $object_id, $file, $object_file, $type='photo', $resize=false,
+		$current_file='',$thumb = false){
+		if($object_file==null) $object_file = new ObjectFile();
+		if($file==null) $file = new File();
+		$ext = end((explode(".", $instance_file->name)));
+		$filenames = uniqid() . '.' . $ext;				
+		$file->file_name = $filenames;
+		$path = '';
+		if(isset(Yii::$app->params['uploadPath'])){
+			$path = Yii::$app->params['uploadPath'].'/'.$object.'/'.$object_id.'/';
+		}
+		else{
+			$path = Yii::getAlias('@file').'/'.$object.'/'.$object_id.'/';
+		}
+		@mkdir($path, 0755, true);
+		@chmod($path, 0755);
+		if(isset($current_file)){
+			@unlink($path . $current_file);
+			@unlink($path . 'thumb_'. $current_file);
+		}
+		
+		if(isset($filenames)){
+			$instance_file->saveAs($path.$filenames);
+			if ($resize) 
+				\hscstudio\heart\helpers\Heart::imageResize($path.$filenames, $path. 'thumb_'. $filenames,148,198,0);
+			if(!isset($file->name)) $file->name = $filenames;
+			if(!isset($file->status)) $file->status=1;
+			$file->save();
+
+			$object_file->object = $object; 
+			$object_file->object_id = $object_id; 
+			$object_file->type = $type; 
+			$object_file->file_id = $file->id; 
+			$object_file->save();
+			return true;
+		}
+		return false;
+	}
+	
+	public function unlink($object_file, $thumb = false){
+		
+		$current_file = $object_file->file->file_name;
+		if(isset($current_file)){
+			$path = '';
+			if(isset(Yii::$app->params['uploadPath'])){
+				$path = Yii::$app->params['uploadPath'].'/'.$object_file->object.'/'.$object_file->object_id.'/';
+			}
+			else{
+				$path = Yii::getAlias('@file').'/'.$object_file->object.'/'.$object_file->object_id.'/';
+			}
+			@chmod($path, 0755);		
+			if(file_exists($path . $current_file)){
+				@unlink($path . $current_file);
+				if($thumb) @unlink($path . 'thumb_'. $current_file);
+			}
+			$object_file->delete();
+			$object_file->file->delete();			
+			return true;
+		}
+		return false;
+	}			
+			
+	public function objectReference($object_reference,$reference_id,$object,$object_id,$type){
+		if($object_reference==null){
+			$object_reference = new ObjectReference();
+		}
+		$object_reference->reference_id = $reference_id;
+		$object_reference->object = $object; 
+		$object_reference->object_id = $object_id; 
+		$object_reference->type = $type; 
+		if($object_reference->save()) return true;
+		else return false;
+	}
+	
+	public function objectPerson($object_person,$person_id,$object,$object_id,$type){
+		if($object_person==null){
+			$object_person = new ObjectPerson();
+		}
+		
+		if($person_id==0){
+			ObjectPerson::deleteAll(
+				'type = :type AND object = :object AND object_id = :object_id' , 
+				[':type' => $type, ':object' => $object, ':object_id' => $object_id]
+			);
+		}
+		else{
+			$object_person->person_id = $person_id;
+			$object_person->object = $object; 
+			$object_person->object_id = $object_id; 
+			$object_person->type = $type; 
+			if($object_person->save()) return true;
+			else return false;
+		}
+	}
+	
+	public function OrganisationAuthorized($code=[],$chairman=[0],$array_map=false){
+		$object_person = \backend\models\Person::find()
+			//->select(['id','name'])
+			->where([
+				'id'=>\backend\models\Employee::find()
+					->select('person_id')
+					->where([
+						'organisation_id'=>\backend\models\Organisation::find()
+							->select('ID')
+							->where([
+								'KD_UNIT_ORG'=>$code,
+							])
+							->column(),
+						'chairman' => $chairman, 
+					])
+					->currentSatker()
+					->column(),
+			])		
+			->active();
+		
+		if($array_map){
+			$data = ArrayHelper::map($object_person->asArray()->all(),'id','name');
+			return $data;
+		}
+		else{
+			$object_person->count();
+			return ($object_person->count()>0)?true:false;
 		}
 	}
 }
