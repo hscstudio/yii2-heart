@@ -93,7 +93,6 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 								'my' => '@hscstudio/heart/modules/gii/crud/default',
 							]
 						],
-						/*
 						'model' => [
 							'class' => 'hscstudio\heart\modules\gii\model\Generator',
 							'templates' => [
@@ -106,7 +105,6 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 								'my' => '@hscstudio/heart/modules/gii/module/default',
 							]
 						],
-						*/
 					],
 				]
 			]);
