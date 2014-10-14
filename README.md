@@ -3,10 +3,13 @@ Yii2-heart
 
 Yii2-heart is extension for Yii Framework version 2.0. It is set of extension (widget, modules, wrapper, etc) to easiest developer in application development.
 
+Warning : This extension under development or PUBLIC PREVIEW :)
+
 
 Roadmap
 ------------
 Done
+- Wrap Yii2-user (https://github.com/dektrium/yii2-user)
 - Wrap Arshaw Calendar 
 - Use Kartik-v Extension
 - Wrap PHPExcel (http://www.yiiframework.com/forum/index.php/topic/52199-how-to-load-phpexcel-in-yii-20-project/)
@@ -73,7 +76,7 @@ return [
 				'datecontrol'=>true,// use false for not use it
 				'gridview'=>true,// use false for not use it
 				'gii'=>true, // use false for not use it
-				// privilege (yii2-admin) please read guide
+				// privilege (yii2-admin), user (yii2-user) please read guide
 			],
 		],
 		...

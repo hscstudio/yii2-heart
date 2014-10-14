@@ -112,10 +112,12 @@ class FullCalendar extends Widget{
 	
 	public function registerScript($view){		
 		$fullcalendar = $view->assetManager->publish('@hscstudio/heart/assets/fullcalendar');
-		$view->registerCssFile($fullcalendar[1].'/fullcalendar.css', ['yii\web\JqueryAsset']);
+		$view->registerCssFile($fullcalendar[1].'/fullcalendar.css', [
+			'depends'  => 'yii\web\JqueryAsset'
+		]);
 		//$view->registerCssFile($fullcalendar[1].'/fullcalendar.print.css');		
-		$view->registerJsFile($fullcalendar[1].'/lib/moment.min.js', ['yii\web\JqueryAsset']);
-		$view->registerJsFile($fullcalendar[1].'/lib/jquery-ui.custom.min.js', ['yii\web\JqueryAsset']);
-		$view->registerJsFile($fullcalendar[1].'/fullcalendar.min.js', ['yii\web\JqueryAsset']);
+		$view->registerJsFile($fullcalendar[1].'/lib/moment.min.js', ['depends'  => 'yii\web\JqueryAsset']);
+		$view->registerJsFile($fullcalendar[1].'/lib/jquery-ui.custom.min.js', ['depends'  => 'yii\web\JqueryAsset']);
+		$view->registerJsFile($fullcalendar[1].'/fullcalendar.min.js', ['depends'  => 'yii\web\JqueryAsset']);
 	}
 }

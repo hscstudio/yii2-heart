@@ -126,9 +126,9 @@ class Heart
 	public static function twodate($start='',$end='',$monthType=0,$yearType=0,$delimiter=' ',$separator=' s.d '){ // $monthType/$yearType 0 = Januari/2014, 1 = Jan/04, 2 = ''
 		$months = ['','','','','','','','','','','',''];
 		if($monthType==0)
-			$months = ['Januari','Februari','Maret','April','Mei','Juni','July','Agustus','September','Oktober','November','Desember'];
+			$months = ['','Januari','Februari','Maret','April','Mei','Juni','July','Agustus','September','Oktober','November','Desember'];
 		else if($monthType==1)	
-			$months = array('Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des');
+			$months = ['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
 		
 		$showdate="";
 		if(empty($start)) $start = date('Y-m-d');
