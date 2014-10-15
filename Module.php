@@ -7,7 +7,7 @@ use yii\bootstrap\BootstrapPluginAsset;
 
 /**
  * Description of Module
- *
+ * fa
  * @author Hafid Mukhlasin
  */
 class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
