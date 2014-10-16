@@ -18,9 +18,13 @@ Icon::map($this, Icon::FA);
         <section class="sidebar">
 			<?php
 			$controller = $this->context;
+			
 			$menus = [];
 			if(isset($this->params['sideMenu'][$controller->module->uniqueId])){
 				$menus = $this->params['sideMenu'][$controller->module->uniqueId];
+			}
+			else if(isset($controller->module->menus)){
+				$menus = $controller->module->menus;
 			}
 			else if(isset($this->params['sideMenu']['heart-global'])){
 				$menus = $this->params['sideMenu']['heart-global'];

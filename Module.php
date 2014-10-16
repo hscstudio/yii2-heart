@@ -56,16 +56,22 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 					'class' => '\kartik\datecontrol\Module',			 
 					// format settings for displaying each date attribute
 					'displaySettings' => [
-						\kartik\datecontrol\Module::FORMAT_DATE => 'd-M-Y',
-						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
-						\kartik\datecontrol\Module::FORMAT_DATETIME => 'd-M-Y H:i:s',
+						\kartik\datecontrol\Module::FORMAT_DATE => 'dd-MM-yyyy',
+						\kartik\datecontrol\Module::FORMAT_TIME => 'HH:mm:ss',
+						\kartik\datecontrol\Module::FORMAT_DATETIME => 'dd-MM-yyyy HH:mm:ss',
 					],			 
 					// format settings for saving each date attribute
 					'saveSettings' => [
-						\kartik\datecontrol\Module::FORMAT_DATE => 'Y-m-d', // U if saves as unix timestamp
-						\kartik\datecontrol\Module::FORMAT_TIME => 'H:i:s',
-						\kartik\datecontrol\Module::FORMAT_DATETIME => 'Y-m-d H:i:s',
-					],					
+						\kartik\datecontrol\Module::FORMAT_DATE => 'php:Y-m-d', // U if saves as unix timestamp
+						\kartik\datecontrol\Module::FORMAT_TIME => 'php:H:i:s',
+						\kartik\datecontrol\Module::FORMAT_DATETIME => 'php:Y-m-d H:i:s',
+					],	
+					
+					// set your display timezone
+					'displayTimezone' => 'Asia/Jakarta',
+			 
+					// set your timezone for date saved to db
+					'saveTimezone' => 'UTC',
 				]
 			]);
 		}
@@ -127,7 +133,8 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 	 
 			$app->setModule('privilege', array_merge([
 				'class' => '\mdm\admin\Module',
-					], $this->features['privilege']));
+				'layout' => '@hscstudio/heart/views/layouts/column2',
+			], $this->features['privilege']));
 	 
 			$app->attachBehavior('access', [
 				'class' => '\mdm\admin\components\AccessControl',
@@ -136,7 +143,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 			
 			//$app->getModule('privilege')->bootstrap($app);
 			
-			$pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views';			
+			/* $pathMap['@mdm/admin/views'] = '@hscstudio/heart/modules/admin/views'; */
 		}
 		
 		$pathMap['@app/views/layouts'] = '@hscstudio/heart/views/layouts';

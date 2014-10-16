@@ -1,0 +1,1661 @@
+Array
+(
+    [0] => Array
+        (
+            [line] => 20
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\Module.php
+            [message] => No short description for element '$features'
+        )
+
+    [1] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\Module.php
+            [message] => No docblock for element 'init'
+        )
+
+    [2] => Array
+        (
+            [line] => 7
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element 'hscstudio\heart\components\HistoryBehavior'
+        )
+
+    [3] => Array
+        (
+            [line] => 9
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element '$historyClass'
+        )
+
+    [4] => Array
+        (
+            [line] => 9
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No short description for element '$historyClass'
+        )
+
+    [5] => Array
+        (
+            [line] => 10
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element '$attributes'
+        )
+
+    [6] => Array
+        (
+            [line] => 10
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No short description for element '$attributes'
+        )
+
+    [7] => Array
+        (
+            [line] => 11
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element '$primaryField'
+        )
+
+    [8] => Array
+        (
+            [line] => 11
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No short description for element '$primaryField'
+        )
+
+    [9] => Array
+        (
+            [line] => 12
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element '$revisionField'
+        )
+
+    [10] => Array
+        (
+            [line] => 12
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No short description for element '$revisionField'
+        )
+
+    [11] => Array
+        (
+            [line] => 13
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element '$revision'
+        )
+
+    [12] => Array
+        (
+            [line] => 13
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No short description for element '$revision'
+        )
+
+    [13] => Array
+        (
+            [line] => 15
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element 'events'
+        )
+
+    [14] => Array
+        (
+            [line] => 23
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\components\HistoryBehavior.php
+            [message] => No docblock for element 'afterUpdate'
+        )
+
+    [15] => Array
+        (
+            [line] => 76
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\DateTimeCompareValidator.php
+            [message] => Method init has no parent to inherit from in hscstudio\heart\helpers\DateTimeCompareValidator.
+        )
+
+    [16] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\DateTimeCompareValidator.php
+            [message] => Method validateAttribute has no parent to inherit from in hscstudio\heart\helpers\DateTimeCompareValidator.
+        )
+
+    [17] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => broken link to \hscstudio\heart\helpers\Excel in hscstudio\heart\helpers\Heart
+        )
+
+    [18] => Array
+        (
+            [line] => 65
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'terbilang'
+        )
+
+    [19] => Array
+        (
+            [line] => 79
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'imageResize'
+        )
+
+    [20] => Array
+        (
+            [line] => 126
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'twodate'
+        )
+
+    [21] => Array
+        (
+            [line] => 172
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'upload'
+        )
+
+    [22] => Array
+        (
+            [line] => 211
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'unlink'
+        )
+
+    [23] => Array
+        (
+            [line] => 234
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'objectReference'
+        )
+
+    [24] => Array
+        (
+            [line] => 246
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'objectPerson'
+        )
+
+    [25] => Array
+        (
+            [line] => 267
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Heart.php
+            [message] => No docblock for element 'OrganisationAuthorized'
+        )
+
+    [26] => Array
+        (
+            [line] => 20
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Kalkun.php
+            [message] => No docblock for element 'AsciiToHex'
+        )
+
+    [27] => Array
+        (
+            [line] => 32
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\Kalkun.php
+            [message] => No docblock for element 'HexToAscii'
+        )
+
+    [28] => Array
+        (
+            [line] => 6
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No docblock for element 'hscstudio\heart\helpers\UrlRule'
+        )
+
+    [29] => Array
+        (
+            [line] => 8
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No docblock for element '$connectionID'
+        )
+
+    [30] => Array
+        (
+            [line] => 8
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No short description for element '$connectionID'
+        )
+
+    [31] => Array
+        (
+            [line] => 10
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No docblock for element 'init'
+        )
+
+    [32] => Array
+        (
+            [line] => 17
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No docblock for element 'createUrl'
+        )
+
+    [33] => Array
+        (
+            [line] => 35
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\helpers\UrlRule.php
+            [message] => No docblock for element 'parseRequest'
+        )
+
+    [34] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => No docblock for element '$layout'
+        )
+
+    [35] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => No short description for element '$layout'
+        )
+
+    [36] => Array
+        (
+            [line] => 32
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => Method getName has no parent to inherit from in hscstudio\heart\modules\gii\crud\Generator.
+        )
+
+    [37] => Array
+        (
+            [line] => 40
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => Method getDescription has no parent to inherit from in hscstudio\heart\modules\gii\crud\Generator.
+        )
+
+    [38] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in hscstudio\heart\modules\gii\crud\Generator.
+        )
+
+    [39] => Array
+        (
+            [line] => 57
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\crud\Generator.php
+            [message] => Method generate has no parent to inherit from in hscstudio\heart\modules\gii\crud\Generator.
+        )
+
+    [40] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No docblock for element '$moduleClass'
+        )
+
+    [41] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No short description for element '$moduleClass'
+        )
+
+    [42] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No docblock for element '$moduleID'
+        )
+
+    [43] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No short description for element '$moduleID'
+        )
+
+    [44] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No docblock for element '$layout'
+        )
+
+    [45] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\giiX\module\Generator.php
+            [message] => No short description for element '$layout'
+        )
+
+    [46] => Array
+        (
+            [line] => 34
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$modelClass'
+        )
+
+    [47] => Array
+        (
+            [line] => 34
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$modelClass'
+        )
+
+    [48] => Array
+        (
+            [line] => 35
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$moduleID'
+        )
+
+    [49] => Array
+        (
+            [line] => 35
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$moduleID'
+        )
+
+    [50] => Array
+        (
+            [line] => 36
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$controllerClass'
+        )
+
+    [51] => Array
+        (
+            [line] => 36
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$controllerClass'
+        )
+
+    [52] => Array
+        (
+            [line] => 37
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$baseControllerClass'
+        )
+
+    [53] => Array
+        (
+            [line] => 37
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$baseControllerClass'
+        )
+
+    [54] => Array
+        (
+            [line] => 38
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$indexWidgetType'
+        )
+
+    [55] => Array
+        (
+            [line] => 38
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$indexWidgetType'
+        )
+
+    [56] => Array
+        (
+            [line] => 39
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element '$searchModelClass'
+        )
+
+    [57] => Array
+        (
+            [line] => 39
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No short description for element '$searchModelClass'
+        )
+
+    [58] => Array
+        (
+            [line] => 212
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\crud\Generator.php
+            [message] => No docblock for element 'getNameAttribute'
+        )
+
+    [59] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$db'
+        )
+
+    [60] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$db'
+        )
+
+    [61] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$ns'
+        )
+
+    [62] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$ns'
+        )
+
+    [63] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$tableName'
+        )
+
+    [64] => Array
+        (
+            [line] => 28
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$tableName'
+        )
+
+    [65] => Array
+        (
+            [line] => 29
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$modelClass'
+        )
+
+    [66] => Array
+        (
+            [line] => 29
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$modelClass'
+        )
+
+    [67] => Array
+        (
+            [line] => 30
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$baseClass'
+        )
+
+    [68] => Array
+        (
+            [line] => 30
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$baseClass'
+        )
+
+    [69] => Array
+        (
+            [line] => 31
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$generateRelations'
+        )
+
+    [70] => Array
+        (
+            [line] => 31
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$generateRelations'
+        )
+
+    [71] => Array
+        (
+            [line] => 32
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$generateLabelsFromComments'
+        )
+
+    [72] => Array
+        (
+            [line] => 32
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$generateLabelsFromComments'
+        )
+
+    [73] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$useTablePrefix'
+        )
+
+    [74] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$useTablePrefix'
+        )
+
+    [75] => Array
+        (
+            [line] => 39
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [76] => Array
+        (
+            [line] => 39
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [77] => Array
+        (
+            [line] => 39
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [78] => Array
+        (
+            [line] => 47
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [79] => Array
+        (
+            [line] => 47
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [80] => Array
+        (
+            [line] => 47
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [81] => Array
+        (
+            [line] => 55
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [82] => Array
+        (
+            [line] => 55
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [83] => Array
+        (
+            [line] => 55
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [84] => Array
+        (
+            [line] => 80
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [85] => Array
+        (
+            [line] => 80
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [86] => Array
+        (
+            [line] => 80
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [87] => Array
+        (
+            [line] => 96
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [88] => Array
+        (
+            [line] => 96
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [89] => Array
+        (
+            [line] => 96
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [90] => Array
+        (
+            [line] => 127
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method autoCompleteData has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [91] => Array
+        (
+            [line] => 127
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method autoCompleteData has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [92] => Array
+        (
+            [line] => 127
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method autoCompleteData has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [93] => Array
+        (
+            [line] => 144
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [94] => Array
+        (
+            [line] => 144
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [95] => Array
+        (
+            [line] => 144
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [96] => Array
+        (
+            [line] => 152
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method stickyAttributes has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [97] => Array
+        (
+            [line] => 152
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method stickyAttributes has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [98] => Array
+        (
+            [line] => 152
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method stickyAttributes has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [99] => Array
+        (
+            [line] => 160
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [100] => Array
+        (
+            [line] => 160
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [101] => Array
+        (
+            [line] => 160
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\model\Generator.
+        )
+
+    [102] => Array
+        (
+            [line] => 398
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => Undefined parameter documented:  in checkPivotTable().
+        )
+
+    [103] => Array
+        (
+            [line] => 511
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$tableNames'
+        )
+
+    [104] => Array
+        (
+            [line] => 511
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$tableNames'
+        )
+
+    [105] => Array
+        (
+            [line] => 512
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No docblock for element '$classNames'
+        )
+
+    [106] => Array
+        (
+            [line] => 512
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\model\Generator.php
+            [message] => No short description for element '$classNames'
+        )
+
+    [107] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => No docblock for element '$moduleClass'
+        )
+
+    [108] => Array
+        (
+            [line] => 26
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => No short description for element '$moduleClass'
+        )
+
+    [109] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => No docblock for element '$moduleID'
+        )
+
+    [110] => Array
+        (
+            [line] => 27
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => No short description for element '$moduleID'
+        )
+
+    [111] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [112] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [113] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [114] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [115] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [116] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [117] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [118] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [119] => Array
+        (
+            [line] => 33
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getName has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [120] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [121] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [122] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [123] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [124] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [125] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [126] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [127] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [128] => Array
+        (
+            [line] => 41
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method getDescription has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [129] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [130] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [131] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [132] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [133] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [134] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [135] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [136] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [137] => Array
+        (
+            [line] => 49
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method rules has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [138] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [139] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [140] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [141] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [142] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [143] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [144] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [145] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [146] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method attributeLabels has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [147] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [148] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [149] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [150] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [151] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [152] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [153] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [154] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [155] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method hints has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [156] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [157] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [158] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [159] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [160] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [161] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [162] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [163] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [164] => Array
+        (
+            [line] => 85
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method successMessage has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [165] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [166] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [167] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [168] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [169] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [170] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [171] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [172] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [173] => Array
+        (
+            [line] => 114
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method requiredTemplates has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [174] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [175] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [176] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [177] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [178] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [179] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [180] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [181] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [182] => Array
+        (
+            [line] => 122
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\modules\gii\module\Generator.php
+            [message] => Method generate has no parent to inherit from in yii\gii\generators\module\Generator.
+        )
+
+    [183] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => broken link to \hscstudio\heart\widgets\begin() in hscstudio\heart\widgets\Box
+        )
+
+    [184] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => broken link to \hscstudio\heart\widgets\end() in hscstudio\heart\widgets\Box
+        )
+
+    [185] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\Box
+        )
+
+    [186] => Array
+        (
+            [line] => 60
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$type'
+        )
+
+    [187] => Array
+        (
+            [line] => 60
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$type'
+        )
+
+    [188] => Array
+        (
+            [line] => 61
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$bgColor'
+        )
+
+    [189] => Array
+        (
+            [line] => 61
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$bgColor'
+        )
+
+    [190] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$header'
+        )
+
+    [191] => Array
+        (
+            [line] => 63
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$header'
+        )
+
+    [192] => Array
+        (
+            [line] => 64
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$headerOptions'
+        )
+
+    [193] => Array
+        (
+            [line] => 64
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$headerOptions'
+        )
+
+    [194] => Array
+        (
+            [line] => 71
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$bodyOptions'
+        )
+
+    [195] => Array
+        (
+            [line] => 71
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$bodyOptions'
+        )
+
+    [196] => Array
+        (
+            [line] => 73
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$footerOptions'
+        )
+
+    [197] => Array
+        (
+            [line] => 73
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$footerOptions'
+        )
+
+    [198] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$footer'
+        )
+
+    [199] => Array
+        (
+            [line] => 74
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$footer'
+        )
+
+    [200] => Array
+        (
+            [line] => 76
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$icon'
+        )
+
+    [201] => Array
+        (
+            [line] => 76
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$icon'
+        )
+
+    [202] => Array
+        (
+            [line] => 77
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No docblock for element '$link'
+        )
+
+    [203] => Array
+        (
+            [line] => 77
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Box.php
+            [message] => No short description for element '$link'
+        )
+
+    [204] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Breadcrumbs.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\Breadcrumbs
+        )
+
+    [205] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Breadcrumbs.php
+            [message] => broken link to \yii\web\Application::homeUrl in hscstudio\heart\widgets\Breadcrumbs
+        )
+
+    [206] => Array
+        (
+            [line] => 96
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No docblock for element 'hscstudio\heart\widgets\FullCalendar'
+        )
+
+    [207] => Array
+        (
+            [line] => 97
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No docblock for element '$options'
+        )
+
+    [208] => Array
+        (
+            [line] => 97
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No short description for element '$options'
+        )
+
+    [209] => Array
+        (
+            [line] => 98
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No docblock for element '$htmlOptions'
+        )
+
+    [210] => Array
+        (
+            [line] => 98
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No short description for element '$htmlOptions'
+        )
+
+    [211] => Array
+        (
+            [line] => 100
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No docblock for element 'run'
+        )
+
+    [212] => Array
+        (
+            [line] => 113
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\FullCalendar.php
+            [message] => No docblock for element 'registerScript'
+        )
+
+    [213] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Modal.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\Modal
+        )
+
+    [214] => Array
+        (
+            [line] => 46
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Modal.php
+            [message] => No docblock for element '$modalSize'
+        )
+
+    [215] => Array
+        (
+            [line] => 46
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Modal.php
+            [message] => No short description for element '$modalSize'
+        )
+
+    [216] => Array
+        (
+            [line] => 47
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Modal.php
+            [message] => No docblock for element '$registerAsset'
+        )
+
+    [217] => Array
+        (
+            [line] => 47
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Modal.php
+            [message] => No short description for element '$registerAsset'
+        )
+
+    [218] => Array
+        (
+            [line] => 20
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\ModalAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [219] => Array
+        (
+            [line] => 20
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\ModalAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [220] => Array
+        (
+            [line] => 21
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\ModalAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [221] => Array
+        (
+            [line] => 21
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\ModalAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [222] => Array
+        (
+            [line] => 98
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Nav.php
+            [message] => No docblock for element '$position'
+        )
+
+    [223] => Array
+        (
+            [line] => 98
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\Nav.php
+            [message] => No short description for element '$position'
+        )
+
+    [224] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \hscstudio\heart\widgets\begin() in hscstudio\heart\widgets\NavBar
+        )
+
+    [225] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \hscstudio\heart\widgets\end() in hscstudio\heart\widgets\NavBar
+        )
+
+    [226] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\NavBar
+        )
+
+    [227] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\NavBar
+        )
+
+    [228] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\NavBar
+        )
+
+    [229] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \yii\helpers\Html::renderTagAttributes() in hscstudio\heart\widgets\NavBar
+        )
+
+    [230] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => broken link to \yii\widgets\Menu in hscstudio\heart\widgets\NavBar
+        )
+
+    [231] => Array
+        (
+            [line] => 70
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\NavBar.php
+            [message] => No short description for element '$brandUrl'
+        )
+
+    [232] => Array
+        (
+            [line] => 96
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SM.php
+            [message] => No docblock for element 'hscstudio\heart\widgets\SM'
+        )
+
+    [233] => Array
+        (
+            [line] => 98
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SM.php
+            [message] => No docblock for element 'run'
+        )
+
+    [234] => Array
+        (
+            [line] => 141
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SM.php
+            [message] => No docblock for element 'registerScript'
+        )
+
+    [235] => Array
+        (
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SideNavMetro.php
+            [message] => broken link to \hscstudio\heart\widgets\items in hscstudio\heart\widgets\SideNavMetro
+        )
+
+    [236] => Array
+        (
+            [line] => 60
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SideNavMetro.php
+            [message] => No docblock for element '$colors'
+        )
+
+    [237] => Array
+        (
+            [line] => 60
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SideNavMetro.php
+            [message] => No short description for element '$colors'
+        )
+
+    [238] => Array
+        (
+            [line] => 93
+            [file] => c:\xampp\htdocs\github\osyawwal2\vendor\hscstudio\yii2-heart\widgets\SideNavMetro.php
+            [message] => No docblock for element 'init'
+        )
+
+)

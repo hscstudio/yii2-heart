@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/9cd966e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/b09ea36e/style.css" rel="stylesheet">
+<script src="./assets/a22d0c8b/jquery.js"></script>
+<script src="./assets/9cd966e/js/bootstrap.js"></script>
+<script src="./assets/54409236/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w106" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w106-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w106-collapse" class="collapse navbar-collapse"><ul id="w107" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w108" class="dropdown-menu"><li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-98" data-toggle="collapse" data-parent="#navigation">hscstudio\heart <b class="caret"></b></a><div id="navigation-98" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-99" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\components <b class="caret"></b></a><div id="navigation-99" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-components-historybehavior.html">HistoryBehavior</a></div>
+<a class="list-group-item" href="#navigation-100" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\extensions <b class="caret"></b></a><div id="navigation-100" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-extensions-opentbs.html">OpenTBS</a></div>
+<a class="list-group-item" href="#navigation-101" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\helpers <b class="caret"></b></a><div id="navigation-101" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-helpers-datetimecomparevalidator.html">DateTimeCompareValidator</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-heart.html">Heart</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-kalkun.html">Kalkun</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-urlrule.html">UrlRule</a></div>
+<a class="list-group-item" href="#navigation-102" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\crud <b class="caret"></b></a><div id="navigation-102" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-modules-gii-crud-generator.html">Generator</a></div>
+<a class="list-group-item active" href="#navigation-103" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\model <b class="caret"></b></a><div id="navigation-103" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./hscstudio-heart-modules-gii-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-104" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\module <b class="caret"></b></a><div id="navigation-104" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-modules-gii-module-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-105" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\widgets <b class="caret"></b></a><div id="navigation-105" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-widgets-box.html">Box</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-dropdown.html">Dropdown</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-dropdownside.html">DropdownSide</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-fullcalendar.html">FullCalendar</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-modal.html">Modal</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-modalasset.html">ModalAsset</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-nav.html">Nav</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navbar.html">NavBar</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navside.html">NavSide</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navsidemetro.html">NavSideMetro</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-sm.html">SM</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-sidenavmetro.html">SideNavMetro</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class hscstudio\heart\modules\gii\model\Generator</h1>
+<div id="nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="hscstudio-heart-modules-gii-model-generator.html">hscstudio\heart\modules\gii\model\Generator</a> &raquo;
+<a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a> &raquo;
+yii\gii\Generator</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+        </table>
+
+<div id="classDescription">
+    <p><strong>This generator will generate one or multiple ActiveRecord classes for the specified database table.</strong></p>
+    
+    </div>
+
+<a name="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$baseClass">
+        <td><a href="yii-gii-generators-model-generator.html#$baseClass-detail">$baseClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="$db">
+        <td><a href="yii-gii-generators-model-generator.html#$db-detail">$db</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$generateLabelsFromComments">
+        <td><a href="yii-gii-generators-model-generator.html#$generateLabelsFromComments-detail">$generateLabelsFromComments</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$generateRelations">
+        <td><a href="yii-gii-generators-model-generator.html#$generateRelations-detail">$generateRelations</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$modelClass">
+        <td><a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$ns">
+        <td><a href="yii-gii-generators-model-generator.html#$ns-detail">$ns</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$tableName">
+        <td><a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="$useTablePrefix">
+        <td><a href="yii-gii-generators-model-generator.html#$useTablePrefix-detail">$useTablePrefix</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+            <tr class="inherited" id="$classNames">
+        <td><a href="yii-gii-generators-model-generator.html#$classNames-detail">$classNames</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                    <tr class="inherited" id="$tableNames">
+        <td><a href="yii-gii-generators-model-generator.html#$tableNames-detail">$tableNames</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+        </table>
+</div>
+
+<a name="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="attributeLabels()">
+        <td><a href="yii-gii-generators-model-generator.html#attributeLabels()-detail">attributeLabels()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="autoCompleteData()">
+        <td><a href="yii-gii-generators-model-generator.html#autoCompleteData()-detail">autoCompleteData()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="generate()">
+        <td><a href="yii-gii-generators-model-generator.html#generate()-detail">generate()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="generateLabels()">
+        <td><a href="yii-gii-generators-model-generator.html#generateLabels()-detail">generateLabels()</a></td>
+        <td>Generates the attribute labels for the specified table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                        <tr class="inherited" id="generateRules()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRules()-detail">generateRules()</a></td>
+        <td>Generates validation rules for the specified table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="generateTableName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateTableName()-detail">generateTableName()</a></td>
+        <td>Generates the table name by considering table prefix.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="getDescription()">
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html#getDescription()-detail">getDescription()</a></td>
+        <td></td>
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html">hscstudio\heart\modules\gii\model\Generator</a></td>
+    </tr>
+            <tr id="getName()">
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html">hscstudio\heart\modules\gii\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="hints()">
+        <td><a href="yii-gii-generators-model-generator.html#hints()-detail">hints()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="requiredTemplates()">
+        <td><a href="yii-gii-generators-model-generator.html#requiredTemplates()-detail">requiredTemplates()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="rules()">
+        <td><a href="yii-gii-generators-model-generator.html#rules()-detail">rules()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="stickyAttributes()">
+        <td><a href="yii-gii-generators-model-generator.html#stickyAttributes()-detail">stickyAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateDb()">
+        <td><a href="yii-gii-generators-model-generator.html#validateDb()-detail">validateDb()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$db-detail">$db</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateModelClass()">
+        <td><a href="yii-gii-generators-model-generator.html#validateModelClass()-detail">validateModelClass()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateNamespace()">
+        <td><a href="yii-gii-generators-model-generator.html#validateNamespace()-detail">validateNamespace()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$ns-detail">$ns</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateTableName()">
+        <td><a href="yii-gii-generators-model-generator.html#validateTableName()-detail">validateTableName()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                <tr class="inherited" id="checkPivotTable()">
+        <td><a href="yii-gii-generators-model-generator.html#checkPivotTable()-detail">checkPivotTable()</a></td>
+        <td>Checks if the given table is a pivot table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="generateClassName()">
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html#generateClassName()-detail">generateClassName()</a></td>
+        <td>Generates a class name from the specified table name.</td>
+        <td><a href="hscstudio-heart-modules-gii-model-generator.html">hscstudio\heart\modules\gii\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="generateRelationLink()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelationLink()-detail">generateRelationLink()</a></td>
+        <td>Generates the link parameter to be used in generating the relation declaration.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="generateRelationName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelationName()-detail">generateRelationName()</a></td>
+        <td>Generate a relation name for the specified table and a base name.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="generateRelations()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelations()-detail">generateRelations()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                    <tr class="inherited" id="getDbConnection()">
+        <td><a href="yii-gii-generators-model-generator.html#getDbConnection()-detail">getDbConnection()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                    <tr class="inherited" id="getTableNames()">
+        <td><a href="yii-gii-generators-model-generator.html#getTableNames()-detail">getTableNames()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr class="inherited" id="isColumnAutoIncremental()">
+        <td><a href="yii-gii-generators-model-generator.html#isColumnAutoIncremental()-detail">isColumnAutoIncremental()</a></td>
+        <td>Checks if any of the specified columns is auto incremental.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                </table>
+</div>
+
+<a name="events"></a>
+
+<a name="constants"></a>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="generateClassName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-modules-gii-model-generator.html#generateClassName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        generateClassName()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Generates a class name from the specified table name.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="hscstudio-heart-modules-gii-model-generator.html#generateClassName()-detail">generateClassName</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$tableName&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tableName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table name (which may contain schema prefix)</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated class name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDescription()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-modules-gii-model-generator.html#getDescription()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getDescription()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="hscstudio-heart-modules-gii-model-generator.html#getDescription()-detail">getDescription</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-modules-gii-model-generator.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getName()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="hscstudio-heart-modules-gii-model-generator.html#getName()-detail">getName</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Oct 2014 05:38:41 +0200</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

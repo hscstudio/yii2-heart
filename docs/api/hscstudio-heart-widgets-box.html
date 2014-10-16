@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/9cd966e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/b09ea36e/style.css" rel="stylesheet">
+<script src="./assets/a22d0c8b/jquery.js"></script>
+<script src="./assets/9cd966e/js/bootstrap.js"></script>
+<script src="./assets/54409236/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w128" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w128-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w128-collapse" class="collapse navbar-collapse"><ul id="w129" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w130" class="dropdown-menu"><li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-120" data-toggle="collapse" data-parent="#navigation">hscstudio\heart <b class="caret"></b></a><div id="navigation-120" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-121" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\components <b class="caret"></b></a><div id="navigation-121" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-components-historybehavior.html">HistoryBehavior</a></div>
+<a class="list-group-item" href="#navigation-122" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\extensions <b class="caret"></b></a><div id="navigation-122" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-extensions-opentbs.html">OpenTBS</a></div>
+<a class="list-group-item" href="#navigation-123" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\helpers <b class="caret"></b></a><div id="navigation-123" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-helpers-datetimecomparevalidator.html">DateTimeCompareValidator</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-heart.html">Heart</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-kalkun.html">Kalkun</a>
+<a class="list-group-item" href="./hscstudio-heart-helpers-urlrule.html">UrlRule</a></div>
+<a class="list-group-item" href="#navigation-124" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\crud <b class="caret"></b></a><div id="navigation-124" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-modules-gii-crud-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-125" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\model <b class="caret"></b></a><div id="navigation-125" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-modules-gii-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-126" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\modules\gii\module <b class="caret"></b></a><div id="navigation-126" class="submenu panel-collapse collapse"><a class="list-group-item" href="./hscstudio-heart-modules-gii-module-generator.html">Generator</a></div>
+<a class="list-group-item active" href="#navigation-127" data-toggle="collapse" data-parent="#navigation">hscstudio\heart\widgets <b class="caret"></b></a><div id="navigation-127" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./hscstudio-heart-widgets-box.html">Box</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-dropdown.html">Dropdown</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-dropdownside.html">DropdownSide</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-fullcalendar.html">FullCalendar</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-modal.html">Modal</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-modalasset.html">ModalAsset</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-nav.html">Nav</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navbar.html">NavBar</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navside.html">NavSide</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-navsidemetro.html">NavSideMetro</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-sm.html">SM</a>
+<a class="list-group-item" href="./hscstudio-heart-widgets-sidenavmetro.html">SideNavMetro</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class hscstudio\heart\widgets\Box</h1>
+<div id="nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a> &raquo;
+yii\bootstrap\Widget</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+        </table>
+
+<div id="classDescription">
+    <p><strong>Box renders a Box HTML component.</strong></p>
+    <p>Any content enclosed between the <span style="background: #f00;">\hscstudio\heart\widgets\begin()</span> and <span style="background: #f00;">\hscstudio\heart\widgets\end()</span> calls of Box
+is treated as the content of the box.
+<code>Box::begin([
+'type'=&gt;'small', // ,small, solid, tiles
+'bgColor'=&gt;'aqua', // , aqua, green, yellow, red, blue, purple, teal, maroon, navy, light-blue
+'options' =&gt; [],
+'headerOptions' =&gt; [
+'button' =&gt; ['collapse','remove'],
+'position' =&gt; 'right', //right, left
+'color' =&gt; '', //primary, info, warning, success, danger
+'class' =&gt; '',
+],
+'header' =&gt; '',
+'bodyOptions' =&gt; [],
+'icon' =&gt; '',
+'link' =&gt; '',
+'footerOptions' =&gt; [],
+'footer' =&gt; 'More info &lt;i class="fa fa-arrow-circle-right"&gt;&lt;/i&gt;',
+]);
+?&gt;
+Your content of the box here
+&lt;?php
+Box::end();</code></p>
+
+    <p>See also <a href="http://almsaeedstudio.com/AdminLTE/pages/widgets.html">http://almsaeedstudio.com/AdminLTE/pages/widgets.html</a>.</p></div>
+
+<a name="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$bgColor">
+        <td><a href="hscstudio-heart-widgets-box.html#$bgColor-detail">$bgColor</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$bodyOptions">
+        <td><a href="hscstudio-heart-widgets-box.html#$bodyOptions-detail">$bodyOptions</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$footer">
+        <td><a href="hscstudio-heart-widgets-box.html#$footer-detail">$footer</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$footerOptions">
+        <td><a href="hscstudio-heart-widgets-box.html#$footerOptions-detail">$footerOptions</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$header">
+        <td><a href="hscstudio-heart-widgets-box.html#$header-detail">$header</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$headerOptions">
+        <td><a href="hscstudio-heart-widgets-box.html#$headerOptions-detail">$headerOptions</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$icon">
+        <td><a href="hscstudio-heart-widgets-box.html#$icon-detail">$icon</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$link">
+        <td><a href="hscstudio-heart-widgets-box.html#$link-detail">$link</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$options">
+        <td><a href="hscstudio-heart-widgets-box.html#$options-detail">$options</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The HTML attributes for the widget container tag.</td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="$type">
+        <td><a href="hscstudio-heart-widgets-box.html#$type-detail">$type</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+    </table>
+</div>
+
+<a name="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="init()">
+        <td><a href="hscstudio-heart-widgets-box.html#init()-detail">init()</a></td>
+        <td>Initializes the widget.</td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+            <tr id="run()">
+        <td><a href="hscstudio-heart-widgets-box.html#run()-detail">run()</a></td>
+        <td>Renders the widget.</td>
+        <td><a href="hscstudio-heart-widgets-box.html">hscstudio\heart\widgets\Box</a></td>
+    </tr>
+    </table>
+</div>
+
+<a name="events"></a>
+
+<a name="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$bgColor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$bgColor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $bgColor        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$bgColor-detail">$bgColor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'default'</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$bodyOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$bodyOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $bodyOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$bodyOptions-detail">$bodyOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$footer-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$footer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $footer        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$footer-detail">$footer</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$footerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$footerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $footerOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$footerOptions-detail">$footerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$header-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$header-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $header        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$header-detail">$header</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$headerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$headerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $headerOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$headerOptions-detail">$headerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'button'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'collapse'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'remove'</span><span style="color: #007700">],&nbsp;</span><span style="color: #DD0000">'position'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'right'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'color'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'default'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">]</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$icon-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$icon-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $icon        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$icon-detail">$icon</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'fa&nbsp;fa-rocket'</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$link-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$link-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $link        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$link-detail">$link</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'#'</span></div>
+
+    
+    
+
+    <div class="detail-header h3" id="$options-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$options-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $options        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="hscstudio-heart-widgets-box.html#$options-detail">$options</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>The HTML attributes for the widget container tag. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "div", the name of the container tag.</li>
+</ul>
+
+    <p>See also <span style="background: #f00;">\yii\helpers\Html::renderTagAttributes()</span> for details on how attributes are being rendered.</p>
+
+    <div class="detail-header h3" id="$type-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#$type-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $type        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"> <a href="hscstudio-heart-widgets-box.html#$type-detail">$type</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'default'</span></div>
+
+    
+    
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Initializes the widget.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="hscstudio-heart-widgets-box.html#init()-detail">init</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="run()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="hscstudio-heart-widgets-box.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        run()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Renders the widget.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="hscstudio-heart-widgets-box.html#run()-detail">run</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Oct 2014 05:38:41 +0200</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
