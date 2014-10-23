@@ -32,7 +32,7 @@ class HistoryBehavior extends Behavior
 			$revision=$this->revision;
 		}
 		else{
-			$revision=$historyClass::getRevision($object->$primaryField);
+			$revision=(int)$historyClass::getRevision($object->$primaryField);
 		}		
        
 		if($object->create_revision){
@@ -46,14 +46,15 @@ class HistoryBehavior extends Behavior
 			$objectHistory = $historyClass::find()
 				->where($params)
 				->one();
-	 
 			if ($objectHistory === null) {
 				// CREATE HISTORY
 				$objectHistory = new $historyClass([
+					$primaryField => $params[$primaryField],
 					$revisionField => '0'
 				]);
 			}
         }
+		
 		
 		$objectHistory->attributes = $object->attributes;
         if ($objectHistory->save()){

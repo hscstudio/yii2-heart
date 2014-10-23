@@ -15,8 +15,12 @@ $(function() {
     "use strict";
 	
 	$(function () { 
-		$("[data-toggle='tooltip']").tooltip(); 
-	});
+		/*$("[data-toggle='tooltip']").tooltip();*/
+
+        $(document).on('mouseover',"[data-toggle='tooltip']",function(){
+            $(this).tooltip();
+        });
+    });
 	
     //Enable sidebar toggle
     $("[data-toggle='offcanvas']").click(function(e) {

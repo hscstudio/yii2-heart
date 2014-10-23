@@ -4,7 +4,7 @@ namespace hscstudio\heart;
 use Yii;
 use yii\bootstrap\BootstrapAsset;
 use yii\bootstrap\BootstrapPluginAsset;
-
+use yii\helpers\ArrayHelper;
 /**
  * Description of Module
  *
@@ -59,22 +59,39 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 						\kartik\datecontrol\Module::FORMAT_DATE => 'dd-MM-yyyy',
 						\kartik\datecontrol\Module::FORMAT_TIME => 'HH:mm:ss',
 						\kartik\datecontrol\Module::FORMAT_DATETIME => 'dd-MM-yyyy HH:mm:ss',
-					],			 
+					],
 					// format settings for saving each date attribute
 					'saveSettings' => [
 						\kartik\datecontrol\Module::FORMAT_DATE => 'php:Y-m-d', // U if saves as unix timestamp
 						\kartik\datecontrol\Module::FORMAT_TIME => 'php:H:i:s',
 						\kartik\datecontrol\Module::FORMAT_DATETIME => 'php:Y-m-d H:i:s',
-					],	
-					
-					// set your display timezone
-					'displayTimezone' => 'Asia/Jakarta',
-			 
-					// set your timezone for date saved to db
-					'saveTimezone' => 'UTC',
+					],
+
+                    'autoWidget' => true,
+
+                    // default settings for each widget from kartik\widgets used when autoWidget is true
+                    'autoWidgetSettings' => [
+                        \kartik\datecontrol\Module::FORMAT_DATE => [
+                            'pluginOptions'=>[
+                                'autoclose'=>true,
+                            ],
+                        ], // example
+                        \kartik\datecontrol\Module::FORMAT_DATETIME => ['pluginOptions'=>['autoclose'=>true]], // example
+                        \kartik\datecontrol\Module::FORMAT_TIME => ['pluginOptions'=>['autoclose'=>true]], // example
+
+                    ],
+                    /*// set your display timezone
+                    'displayTimezone' => 'Asia/Jakarta',
+
+                    // set your timezone for date saved to db
+                    'saveTimezone' => 'UTC',
+
+                    // automatically use kartik\widgets for each of the above formats
+                    */
 				]
 			]);
-		}
+            Yii::$container->set('kartik\datecontrol\DateControl', ['ajaxConversion'=>false]);
+        }
 		
 		if(!isset($this->features['gridview'])) $this->features['gridview']=true;
 		if($this->features['gridview']!=false){		
@@ -118,10 +135,10 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		
 		if(!isset($this->features['privilege'])) $this->features['privilege']=true;
 		if($this->features['privilege']!=false){		
-			$authManager = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'authManager', [
+			$authManager = ArrayHelper::remove($this->features['privilege'], 'authManager', [
 					'class' => 'yii\rbac\DbManager',
 			]);
-			$allowActions = yii\helpers\ArrayHelper::remove($this->features['privilege'], 'allowActions', [
+			$allowActions = ArrayHelper::remove($this->features['privilege'], 'allowActions', [
 					'debug/*',
 					'site/*',
 					'gii/*',
@@ -163,7 +180,11 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface
 		$view->registerCssFile($assets[1].'/css/metroui.css', [
 			'depends' => [BootstrapAsset::className()],
 		], 'css-metroui');
-		
+
+        $view->registerCssFile($assets[1].'/css/family-tree.css', [
+            'depends' => [BootstrapAsset::className()],
+        ], 'css-family-tree');
+
 		$view->registerJsFile($assets[1].'/js/heart.js', [
 			'depends' => [BootstrapPluginAsset::className()]
 		]);

@@ -71,11 +71,11 @@ class DateTimeCompareValidator extends Validator
 
 
     /**
-     * @inheritdoc
+     * @
      */
     public function init()
     {
-        parent::init();
+		parent::init();
         if ($this->message === null) {
             switch ($this->operator) {
                 case '==':
