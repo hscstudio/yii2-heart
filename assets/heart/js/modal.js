@@ -1,4 +1,5 @@
-$(document).on('click','.modal-heart').on('click', function () {
+//$(document).ready(function() {
+	$(document).on('click','.modal-heart',function () {
         var $modal = $('#modal-heart');
         var $link = $(this);
         var $source = $link.attr('source')
@@ -43,10 +44,10 @@ $(document).on('click','.modal-heart').on('click', function () {
         });
         return false;
     });
-}
 
-$('#modal-heart').on('keydown', function (e) {
-	if (e.keyCode === 82) {
-		$('.modal-refresh').trigger('click');
-	} 
-});
+	$('#modal-heart').on('keydown', function (e) {
+		if (e.keyCode === 82) {
+			$('.modal-refresh').trigger('click');
+		} 
+	});
+//});
