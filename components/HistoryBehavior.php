@@ -37,6 +37,7 @@ class HistoryBehavior extends Behavior
        
 		if($object->create_revision){
 			$objectHistory = new $historyClass([
+				$primaryField => $object->$primaryField,
 				$revisionField => $revision+1
 			]);
 		}
